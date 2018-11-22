@@ -1,0 +1,59 @@
+<h4>
+  Adicionar posto
+</h4>
+<p></p>
+<mat-divider></mat-divider>
+
+<form class="example-form" (ngSubmit)="onSubmit()" [formGroup]="campanhaForm" #formDir="ngForm">
+
+  <div *ngIf='errors?.length '>
+    <mat-error *ngFor="let error of errors">
+      {{error}}
+    </mat-error>
+  </div>
+  <div *ngIf='done?.length' style='color:green'>
+
+    Posto adicionado com sucesso
+  </div>
+
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Titulo" formControlName="titulo" [errorStateMatcher]="matcher">
+    <!-- <mat-hint></mat-hint> -->
+
+    <mat-error *ngIf="titulo.hasError('required')">
+      Email is
+      <strong>required</strong>
+    </mat-error>
+
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="conteudo" formControlName="conteudo" [errorStateMatcher]="matcher"></textarea>
+      <!-- <mat-hint></mat-hint> -->
+  
+      <mat-error *ngIf="conteudo.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+  
+    </mat-form-field>
+  <div class='appInput'>
+    <mat-hint>
+
+      Escolha o estado que vai receber a campanha
+      <br>
+    </mat-hint>
+    <mat-form-field>
+
+      <mat-select formControlName='estado_alvo' placeholder='Estado'>
+        <mat-option *ngFor="let estado of estados | async" value="{{estado['ID']}}">{{estado['Nome']}}</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+  
+  </div>
+ <div>
+
+  <button [disabled]="campanhaForm.invalid" type='submit' mat-raised-button color="primary">Criar</button>
+</div>
+    </form>

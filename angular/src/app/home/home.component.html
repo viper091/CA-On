@@ -1,0 +1,269 @@
+<app-e-header>
+    <app-e-header-title>
+        <div>
+            <h1>
+
+                Carteira de Vacinação Online
+            </h1>
+            <h2 style='font-size: 18px;
+                        font-weight: 300;
+                        line-height: 28px;'>
+                Saia do passado, tenha acesso a sua carterinha de vacinação a qualquer monento!
+            </h2>
+
+
+            <button mat-raised-button routerLink='/login'> Não perca mais tempo!</button>
+        </div>
+
+
+
+    </app-e-header-title>
+
+
+
+</app-e-header>
+<mat-sidenav-container class="example-container">
+    <ngx-hm-carousel [(ngModel)]="index" [autoplay-speed]="3000" [autoplay]="true" [infinite]="infinite" [between-delay]="2000"
+        class="carousel c-accent">
+
+
+
+        <section ngx-hm-carousel-container class="content">
+            <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/picada.png)'}"> 
+
+
+                <div class='img'>
+
+                    <div class='titulo'>
+
+
+                        <h1>
+                            Ministério da Saúde confirma 1,5 mil casos de sarampo no país
+                        </h1>
+                    </div>
+
+                    <p>
+
+
+                        Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues, afirmou nesta segunda-feira,
+                        18, estar em estudo pela pasta uma proposta para tornar obrigatória a vacinação das crianças pelo
+                        País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o Ministério da Educação
+                        para transformar a carteira de imunização em pré-requisito da matrícula escolar. Pela regra geral,
+                        há apenas uma recomendação de que o certificado seja apresentado. “Estratégias pontuais já foram
+                        adotadas por algumas Assembleias Legislativas. Será que não é o momento de o ministério, com o MEC,
+                        tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de vacinação acompanhada?
+                        ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da República para discutir
+                        os baixos indicadores de vacinação.
+
+                    </p>
+
+
+
+                </div>
+            </article>
+            <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/2.jpg)'}">
+
+
+                <div class='img'>
+
+                    <div class='titulo'>
+
+
+                        <h1>
+                                Farmácias e drogarias são autorizadas a aplicar vacinas em SP
+                             </h1>
+                    </div>
+
+                    <p>
+
+                            São Paulo – As farmácias e drogarias vão passar a integrar a rede de locais para vacinação na cidade de São Paulo. Segundo a Secretaria Municipal da Saúde, as unidades poderão ser cadastradas no Cadastro Nacional dos Estabelecimentos de Saúde (CNES) para ter o licenciamento sanitário para realizar o serviço de imunização.
+                            A capital já conta com a lei municipal nº 16.739/2017, que regulamenta a aplicação das vacinas nesses estabelecimentos. A pasta informou que houve uma mobilização da secretaria com o Conselho Regional de Farmácia do Estado de São Paulo (CRF-SP) e da Associação Brasileira de Redes de Farmácias e Drogarias (Abrafarma) para viabilizar o cadastramento junto ao Ministério da Saúde.
+
+                    </p>
+
+
+
+                </div>
+            </article>
+
+            <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/3.jpg)'}">
+
+
+                <div class='img'>
+
+                    <div class='titulo'>
+
+
+                        <h1>
+                                Com 1,6 mil casos, Brasil luta para evitar novo surto de sarampo
+                            </h1>
+                    </div>
+
+                    <p>
+
+                            São Paulo — O governo federal enfrenta um novo desafio em relação à saúde pública dos brasileiros: a ameaça de um novo surto de sarampo no país. Nesta semana, o Ministério da Saúde divulgou que já foram confirmados 1,6 mil casos da doença viral. Outros 7 mil ainda estão em investigação, segundo o órgão. 
+                            A infecção, causada por um vírus altamente contagioso, havia sido considerada erradicada no Brasil em 2016 pela Organização Mundial da Saúde (OMS). 
+                            Nesta nova incidência, os estados que concentram o maior número de casos são Amazonas, com 1,3 mil pessoas infectadas, e Roraima, que registrou 301 ocorrências. Até o momento, as duas regiões foram as únicas que reportaram mortes em decorrência do sarampo, com quatro vítimas em cada estado.
+                
+                    </p>
+
+
+
+                </div>
+            </article>
+
+            <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/4.jpg)'}">
+
+
+                <div class='img'>
+
+                    <div class='titulo'>
+
+
+                        <h1>
+                                Governo estuda tornar obrigatória vacinação de crianças
+                            </h1>
+                    </div>
+
+                    <p>
+                            Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues, afirmou nesta segunda-feira, 18, estar em estudo pela pasta uma proposta para tornar obrigatória a vacinação das crianças pelo País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o Ministério da Educação para transformar a carteira de imunização em pré-requisito da matrícula escolar. Pela regra geral, há apenas uma recomendação de que o certificado seja apresentado.
+                            
+                            “Estratégias pontuais já foram adotadas por algumas Assembleias Legislativas. Será que não é o momento de o ministério, com o MEC, tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de vacinação acompanhada? ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da República para discutir os baixos indicadores de vacinação.
+                            
+                    </p>
+
+
+
+                </div>
+            </article>
+
+      
+        </section>
+
+        <ng-template #carouselPrev>
+            <div class="click-area">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+        </ng-template>
+        <ng-template #carouselNext>
+            <div class="click-area">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </ng-template>
+
+        <ng-template #carouselDot let-model>
+            <div class="ball bg-accent" [class.visible]="model.index === model.currentIndex"></div>
+        </ng-template>
+
+        <ng-template #carouselProgress let-progress>
+            <div class="progress" *ngIf="progress > 0" [style.width]="(direction==='right' ? progress : 100 - progress) + '%'"></div>
+        </ng-template>
+
+    </ngx-hm-carousel>
+    <!-- 
+    <div ngClass="home-content full-inline full-block" [ngClass.xs]="{'full-inline':false, 'full-block':true}" [ngClass.sm]="{'full-inline':false, 'full-block':true}"
+        [ngClass.md]="{'full-inline':true, 'full-block':false}" [ngClass.lg]="{'full-inline':true, 'full-block':false}">
+        <div >
+
+
+
+            <img src='/imagens/o-medico-de-ontem-de-hoje-e-do-futuro-media.png'>
+
+            <mat-card class='card'>
+
+                <mat-card-content>
+
+
+                    <p>
+
+
+                        Perdeu a carterinha de vacinação e precisa tomar a vacina da febre amarela? A orientação da Anvisa (Agência Nacional de Vigilância
+                        Sanitária) é que a pessoa entre em contato com o local onde foi realizada a vacinação para o resgate
+                        da 2ª via. Em caso de dúvida ou impossibilidade de adquirir a carteira de vacinação, vale procurar
+                        o Programa Nacional de Imunização/ Ministério da Saúde. Esse setor é o responsável para avaliação
+                        e encaminhamento dos questionamentos das atividades de vacinação das unidades de saúde. Muita gente
+                        também não se lembra se já tomou ou não a vacina da febre amarela. Na dúvida, a recomendação é se
+                        imunizar novamente. Vale destacar que a campanha de febre amarela é preventiva e voltada aos moradores
+                        da zona norte de São Paulo. A ação começou no dia 21 de outubro, após um macaco ser encontrado morto
+                        no Horto Florestal vítima de febre amarela. Dose única para toda a vida A vacina contra a febre amarela
+                        é a melhor forma de se prevenir da doença, e uma única dose é o suficiente para se proteger por toda
+                        a vida. Mas nem todos devem tomar. O imunizante não é indicado para gestantes, mulheres amamentando
+                        crianças com até 6 meses e pessoas imunodeprimidas, como pacientes em tratamento quimioterápico,
+                        radioterápico ou com corticoides em doses elevadas (portadores de Lúpus, por exemplo). Mais de 500
+                        mil se imunizaram Na quarta-feira (1º), a meta da primeira etapa da campanha, que era de vacinar
+                        moradores da região do entorno dos parques do Horto, Cantareira e Anhanguera, foi batida. Somente
+                        na quinta-feira (2), feriado de Finados, 34.222 pessoas se vacinaram nas 37 UBSs (Unidades Básicas
+                        de Saúde), que atenderam até as 14h. Até agora, 539.949 moradores da zona norte foram vacinados,
+                        segundo a secretaria de saúde. Vale ressaltar que as ações de rotina — vacinação para pessoas que
+                        precisam viajar para áreas de risco, seguem nos demais postos da cidade. Veja a lista completa aqui
+                    </p>
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+
+        <div>
+
+
+
+
+            <mat-card class='card'>
+
+                <mat-card-content>
+
+
+
+                    <p>
+
+                        Perdeu a carterinha de vacinação e precisa tomar a vacina da febre amarela? A orientação da Anvisa (Agência Nacional de Vigilância
+                        Sanitária) é que a pessoa entre em contato com o local onde foi realizada a vacinação para o resgate
+                        da 2ª via. Em caso de dúvida ou impossibilidade de adquirir a carteira de vacinação, vale procurar
+                        o Programa Nacional de Imunização/ Ministério da Saúde. Esse setor é o responsável para avaliação
+                        e encaminhamento dos questionamentos das atividades de vacinação das unidades de saúde. Muita gente
+                        também não se lembra se já tomou ou não a vacina da febre amarela. Na dúvida, a recomendação é se
+                        imunizar novamente. Vale destacar que a campanha de febre amarela é preventiva e voltada aos moradores
+                        da zona norte de São Paulo. A ação começou no dia 21 de outubro, após um macaco ser encontrado morto
+                        no Horto Florestal vítima de febre amarela. Dose única para toda a vida A vacina contra a febre amarela
+                        é a melhor forma de se prevenir da doença, e uma única dose é o suficiente para se proteger por toda
+                        a vida. Mas nem todos devem tomar. O imunizante não é indicado para gestantes, mulheres amamentando
+                        crianças com até 6 meses e pessoas imunodeprimidas, como pacientes em tratamento quimioterápico,
+                        radioterápico ou com corticoides em doses elevadas (portadores de Lúpus, por exemplo). Mais de 500
+                        mil se imunizaram Na quarta-feira (1º), a meta da primeira etapa da campanha, que era de vacinar
+                        moradores da região do entorno dos parques do Horto, Cantareira e Anhanguera, foi batida. Somente
+                        na quinta-feira (2), feriado de Finados, 34.222 pessoas se vacinaram nas 37 UBSs (Unidades Básicas
+                        de Saúde), que atenderam até as 14h. Até agora, 539.949 moradores da zona norte foram vacinados,
+                        segundo a secretaria de saúde. Vale ressaltar que as ações de rotina — vacinação para pessoas que
+                        precisam viajar para áreas de risco, seguem nos demais postos da cidade. Veja a lista completa aqui
+                    </p>
+
+                </mat-card-content>
+
+            </mat-card>
+
+            <img src='/imagens/o-medico-de-ontem-de-hoje-e-do-futuro-media.png'>
+        </div>
+    </div> -->
+
+    <mat-card class='additional-info'>
+
+
+        <mat-card-title>
+            Nunca mais perca a carteira de vacinação
+            <!-- This fils the remaining space of the current row -->
+        </mat-card-title>
+        <mat-card-subtitle>
+
+        </mat-card-subtitle>
+        <mat-card-content>
+            <div>
+                O sistema mantem seu dados em segurança, eles jamais serão perdidos ou alterados sem sua permissão
+            </div>
+
+        </mat-card-content>
+
+    </mat-card>
+
+
+
+
+</mat-sidenav-container>

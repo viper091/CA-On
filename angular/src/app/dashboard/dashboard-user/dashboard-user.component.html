@@ -1,0 +1,49 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+
+        <div class='sidemenu'>
+
+            <mat-list>
+
+              <mat-list-item> 
+                
+                  <button mat-raised-button routerLink="/dashboard/user/minha-carterinha">
+                    
+                    <i class="material-icons">
+                      view_list
+                    </i>
+                    Minha carterinha
+
+                  </button> 
+                </mat-list-item>
+              <mat-list-item> 
+                  <button  mat-raised-button routerLink="/dashboard/user/historico">
+                    <i class="material-icons">
+                      timeline
+                      </i>
+                    Historico 
+                  </button> 
+  
+              </mat-list-item>
+              <mat-list-item> 
+                  <button  mat-raised-button routerLink="/dashboard/user/dados">
+                    <i class="material-icons">
+                   assignment_ind
+                   </i>
+                    Meus dados
+                  </button> 
+
+              </mat-list-item>
+            </mat-list>
+    
+          </div>
+
+    </mat-drawer>
+    
+    <mat-drawer-content>
+      <div class='example-container-user'>
+        <router-outlet></router-outlet>
+        
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>

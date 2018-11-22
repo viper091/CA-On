@@ -1,0 +1,72 @@
+<h4>
+  Meu dados
+</h4>
+<p></p>
+<form class="dados-form" (ngSubmit)="onSubmit()" [formGroup]="dadosForm" #formDir="ngForm">
+            
+    <div *ngIf='errors '>
+        <mat-error *ngFor="let error of errors"> 
+                {{error}}
+            </mat-error>
+    </div>
+    <div *ngIf='done' style='color:green'>
+      Os dados foram salvos!
+    </div>
+    <mat-form-field class="login-full-width">
+        <input matInput placeholder="Nome" formControlName="name" [errorStateMatcher]="matcher">
+        <mat-hint>Errors appear instantly!</mat-hint>
+
+        <mat-error *ngIf="name.hasError('required')">
+            Email is <strong>required</strong>
+        </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="login-full-width">
+        <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher">
+        <mat-hint>Errors appear instantly!</mat-hint>
+        <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+            Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="email.hasError('required')">
+            Email is <strong>required</strong>
+        </mat-error>
+
+    </mat-form-field>
+
+  
+
+      
+    <mat-form-field>
+        <input [max]="maxDate" formControlName='data_nascimento' placeholder="Data de nascimento" matInput [matDatepicker]="myDatepicker">
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+        <!-- <mat-hint>Data de nascimento!</mat-hint> -->
+
+    </mat-form-field>
+    <div>
+
+        <mat-form-field>
+            <mat-select  formControlName='id_estado' placeholder='Estado'>
+                <mat-option *ngFor="let estado of estados | async" value="{{estado['ID']}}">{{estado['Nome']}}</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select formControlName='id_cidade' placeholder='Cidade' >
+        
+                <!-- <div *ngIf='currentEstadoID.length > 0'> -->
+                  <mat-option *ngFor="let cidade of cidades | async|  filterByState: currentEstadoID" value="{{cidade['ID']}}">{{cidade['Nome']}}</mat-option>
+
+                <!-- </div>     -->
+
+            </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+
+        <button [disabled]="dadosForm.invalid" type='submit' mat-raised-button color="primary">Salvar</button>
+      </div>
+
+
+</form>

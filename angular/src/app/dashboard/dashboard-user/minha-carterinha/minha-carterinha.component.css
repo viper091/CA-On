@@ -1,0 +1,52 @@
+.ca{
+    
+    display: flex;
+    
+}
+.card{
+    margin:2px;
+}
+.ca div{
+
+margin: 10px;
+}
+
+.dados{
+    padding:5px;
+
+
+}
+
+.header{
+    background-color: bisque;
+    margin:0;}
+    .vacinas-h4{
+    padding-top:25px;
+    
+}
+
+ul{
+    /* box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12); */
+    margin:1px;
+    list-style: none;
+    padding:0;
+    max-width: 120px;
+}
+ul li{
+    margin:0;
+    padding:4px;
+    display: inline;
+    font-size:70%;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+}
+
+ul li:first-child{
+
+    background-color: cadetblue;
+    color:white;
+
+
+
+}
+

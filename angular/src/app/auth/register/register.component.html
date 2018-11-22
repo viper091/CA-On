@@ -1,0 +1,110 @@
+<app-e-header>
+    <app-e-header-title>
+        Criar conta
+    </app-e-header-title>
+
+</app-e-header>
+<mat-sidenav-container  [ngClass.lg]="'login-content-lg'" class="example-container">
+    <div >
+        <mat-card>
+            <mat-card-title></mat-card-title>
+            <mat-card-subtitle>Preencha as lacunas abaixo para criar sua carteira online de vacinação</mat-card-subtitle>
+            <form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="registerForm" #formDir="ngForm">
+            
+                <div *ngIf='errors '>
+                    <mat-error *ngFor="let error of errors"> 
+                            {{error}}
+                        </mat-error>
+                </div>
+                <div *ngIf='done' style='color:green'>
+
+                    Conta criada com sucesso
+                </div>
+                <mat-form-field class="login-full-width">
+                    <input matInput placeholder="Nome" formControlName="name" [errorStateMatcher]="matcher">
+                    <mat-hint>Errors appear instantly!</mat-hint>
+           
+                    <mat-error *ngIf="name.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field class="login-full-width">
+                    <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher">
+                    <mat-hint>Errors appear instantly!</mat-hint>
+                    <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="email.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+
+                </mat-form-field>
+
+                <div formGroupName="passGroup">
+
+                    <mat-form-field class="login-full-width">
+                        <input matInput placeholder="Senha" formControlName="password" [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+
+                        <mat-hint>Errors appear instantly!</mat-hint>
+
+                        <mat-error *ngIf="password.hasError('required')">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="login-full-width">
+                        <input matInput placeholder="Confirmar Senha" formControlName="confirmPassword" [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+
+                        <mat-hint>Errors appear instantly!</mat-hint>
+
+                        <mat-error *ngIf="confirmPassword.hasError('required')">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="confirmPassword.hasError('MatchPassword')">
+                            Password doesnt <strong>match</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field>
+                    <input [max]="maxDate" formControlName='data' placeholder="Data de nascimento" matInput [matDatepicker]="myDatepicker">
+                    <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #myDatepicker></mat-datepicker>
+                    <!-- <mat-hint>Data de nascimento!</mat-hint> -->
+
+                </mat-form-field>
+                <div>
+
+                    <mat-form-field>
+                        <mat-select  formControlName='estado' placeholder='Estado'>
+                            <mat-option *ngFor="let estado of estados | async" value="{{estado['ID']}}">{{estado['Nome']}}</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-select formControlName='cidade' placeholder='Cidade' >
+                    
+                            <div *ngIf='currentEstadoID.length > 0'>
+
+                                <mat-option *ngFor="let cidade of cidades | async |  filterByState: currentEstadoID" value="{{cidade['ID']}}">{{cidade['Nome']}}</mat-option>
+                            </div>    
+
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <mat-grid-list cols="4">
+                    <mat-grid-tile>
+                        <button [disabled]="registerForm.invalid" type='submit' mat-raised-button color="primary">Criar</button>
+                    </mat-grid-tile>
+
+
+                </mat-grid-list>
+
+            </form>
+        </mat-card>
+    </div>
+
+</mat-sidenav-container>

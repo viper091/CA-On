@@ -1,0 +1,84 @@
+<div class='notifications mat-elevation-z4'>
+  <ul>
+    <div *ngIf='notifications_get   ; else loading'>
+      <div *ngIf='!notifications.length'>
+        Nenhuma notificação
+      </div>
+      <div *ngFor='let notification of notifications; index as i'>
+        <li class='notification_item'  [ngClass]="{
+          'notification_highlight': notification.read_at==null
+        }">
+          <div class='notification_author'>
+            <div>
+
+              SISTEMA
+            </div>
+            <div>
+
+
+
+              <b *ngIf='notification.created_at; else now' class='notification_date'> {{notification.created_at|date}}</b>
+              <ng-template #now>
+                <b class='notification_date'>
+                  Agora
+
+                </b>
+
+              </ng-template>
+            </div>
+          </div>
+          <div class="divider">
+          </div>
+          <!-- <mat-divider [vertical]='true'></mat-divider> -->
+          <div class='notification-content'>
+
+
+
+            <h5 class='notification_title'>
+              {{notification.data['title']}}
+              <small>
+              <mat-button-toggle-group #group="matButtonToggleGroup">
+                  <span *ngIf='group.value != 1; else aaa'>
+  
+                    <mat-button-toggle value="1">
+                      Ver mais
+                    </mat-button-toggle>
+                  </span>
+  
+                  <ng-template #aaa>
+                    <mat-button-toggle value="0">
+                      Ver menos
+                    </mat-button-toggle>
+                  </ng-template>
+                </mat-button-toggle-group>         
+              </small>     
+            </h5>
+            
+            <span class='notification_data'>
+              
+
+              <span *ngIf='group.value != 1; else show_all'>
+
+                {{notification.data['data'] | words : 5 : '...'}}
+              </span>
+              <ng-template #show_all>
+                {{notification.data['data'] }}
+
+              </ng-template>
+
+              
+
+            </span>
+
+
+            <!-- <mat-divider *ngIf='i+1 < notifications.length '></mat-divider> -->
+          </div>
+        </li>
+      </div>
+    </div>
+    <ng-template #loading>
+      <mat-progress-spinner class='disable-scroll' mode="indeterminate"></mat-progress-spinner>
+    </ng-template>
+  </ul>
+
+</div>

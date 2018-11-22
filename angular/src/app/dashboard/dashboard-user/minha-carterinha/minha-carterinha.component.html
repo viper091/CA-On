@@ -1,0 +1,59 @@
+<h4>
+  Carteira de vacinação
+</h4>
+<p>Encontre todas as vacinas que tomou desde o começo</p>
+<div class='ca'>
+  <mat-card class='header'>
+
+
+    <h4 class='vacinas-h4'>
+      Vacinas
+    </h4>
+    <!-- <br><br> -->
+    
+  </mat-card>
+  
+  
+  <mat-card *ngFor='let vacina of dataC' class='card'>
+    <mat-card>
+      <h4>
+
+        {{vacina.name}}
+        <!-- {{id}} -->
+
+      </h4>
+    </mat-card>
+    <br>
+    <mat-divider></mat-divider>
+
+
+    <!-- Data {{vacina.historico.created_at|date}} -->
+    <div *ngIf='vacina.historico && vacina.historico?.length > 0; else aa' class='dados'>
+ 
+      <div *ngFor='let historico of vacina.historico; let i = index  '>
+
+        <ul>
+
+          <li>
+            Dose {{i+1}}°
+          </li>
+          <li>
+            {{historico.created_at|date:'dd/MM/yyyy'}}
+
+          </li>
+        </ul>
+        
+        <i style='margin-left: 40%;' class="material-icons" *ngIf='i < vacina.historico.length-1'>
+            arrow_downward
+            </i>
+      </div>
+    </div>
+    <ng-template #aa>
+      <p>
+
+        Sem dados
+      </p>
+    </ng-template>
+  </mat-card>
+
+</div>

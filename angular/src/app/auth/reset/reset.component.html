@@ -1,0 +1,83 @@
+<app-e-header>
+  <app-e-header-title>Esqueceu sua senha</app-e-header-title>
+</app-e-header>
+<mat-sidenav-container [ngClass.lg]="'login-content-lg'" class="example-container">
+
+
+  <div>
+    <mat-card>
+      <mat-horizontal-stepper linear #stepper>
+
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup" (ngSubmit)="onSubmit_Email()">
+
+            <ng-template matStepLabel>Email</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Email" formControlName="email" required>
+            </mat-form-field>
+            <mat-error *ngIf="email.hasError('email')">
+              Digite um email valido
+            </mat-error>
+            <mat-error *ngIf="email.hasError('not_exist')">
+              Email não encontrado
+            </mat-error>
+
+            <div>
+              <button type='submit' mat-button>Proximo</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup" (ngSubmit)="onSubmit_CheckKey()">
+            <mat-error *ngIf="key.hasError('key')">
+              Chave incorreta
+            </mat-error>
+            <ng-template matStepLabel>Chave</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Chave" formControlName="key" required>
+
+
+            </mat-form-field>
+            <mat-error *ngIf="key.hasError('required')">
+              Digite a chave recebida no email
+            </mat-error>
+            <div>
+              <button mat-button matStepperPrevious>Voltar</button>
+              <button type='submit' mat-button>Proximo</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="thirdFormGroup">
+          <form [formGroup]="thirdFormGroup">
+
+            <ng-template matStepLabel> Nova senha</ng-template>
+            <mat-form-field>
+              <input type='password' matInput placeholder="Nova senha" formControlName="password" required>
+
+              <mat-error *ngIf="password.hasError('required')">
+                Digite a nova senha
+              </mat-error>
+            </mat-form-field>
+      
+
+            <mat-form-field>
+              <input type='password' matInput placeholder="Confirme a senha" formControlName="password_confirmation" required>
+
+              <mat-error *ngIf="password_confirmation.hasError('required')">
+                Digite a novamente a senha
+              </mat-error>
+  
+            </mat-form-field>
+       
+
+            <div>
+              <button mat-button matStepperPrevious>Voltar</button>
+              <button mat-button mat-raised-button color="primary" (click)='onSubmit()'>Confirmar</button>
+            </div>
+          </form>
+        </mat-step>
+      
+      </mat-horizontal-stepper>
+    </mat-card>
+  </div>
+</mat-sidenav-container>

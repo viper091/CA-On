@@ -1,0 +1,84 @@
+<h4>
+    Adicionar aplicador
+  </h4>
+  <p></p>
+  <mat-divider></mat-divider>
+
+<form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="newAppForm" #formDir="ngForm">
+
+  <div *ngIf='errors '>
+    <mat-error *ngFor="let error of errors">
+      {{error}}
+    </mat-error>
+  </div>
+  <div *ngIf='done' style='color:green'>
+
+    Aplicador designado com sucesso
+  </div>
+
+
+  <mat-form-field class="appInput">
+    <input matInput placeholder="Email do aplicador" formControlName="app_email" [errorStateMatcher]="matcher">
+    <!-- <mat-hint></mat-hint> -->
+    <mat-error *ngIf="app_email.hasError('not_found')">
+      Email  não existe<strong></strong>
+    </mat-error>
+    <mat-error *ngIf="app_email.hasError('email') && !app_email.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="app_email.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+
+    
+
+  </mat-form-field>
+
+  <div class='appInput'>
+    <mat-hint>
+
+      Escolha o estado e cidade em que o posto de saude se encontra
+      <br>
+    </mat-hint>
+    <mat-form-field>
+
+      <mat-select formControlName='posto_estado' placeholder='Estado'>
+      
+        
+        <mat-option *ngFor="let estado of estados | async" value="{{estado['ID']}}">{{estado['Nome']}}</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select formControlName='posto_cidade' placeholder='Cidade'>
+
+        <div *ngIf='currentEstadoID.length > 0'>
+
+          <mat-option *ngFor="let cidade of cidades | async |  filterByState: currentEstadoID" value="{{cidade['ID']}}">{{cidade['Nome']}}</mat-option>
+        </div>
+
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <mat-hint>
+
+    Selecione um dos postos de saude abaixo:
+    <br>
+    </mat-hint>
+    <mat-form-field>
+      <mat-select formControlName='postos' required placeholder='Postos'>
+        <mat-option selected>NENHUM</mat-option>
+        <mat-option *ngFor="let posto of postosData | async" value="{{posto['id']}}">{{posto['endereco']}}</mat-option>
+
+      </mat-select>
+      <mat-error *ngIf="postos.hasError('required')">
+        Posto is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <div>
+
+      <button [disabled]="newAppForm.invalid" type='submit' mat-raised-button color="primary">Criar</button>
+    </div>
+
+
+</form>

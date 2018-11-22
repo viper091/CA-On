@@ -1,0 +1,61 @@
+<h4>
+  Adicionar Vacina
+</h4>
+<p></p>
+<mat-divider></mat-divider>
+
+<form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="makeVacinaForm" #formDir="ngForm">
+
+  <div *ngIf='errors '>
+    <mat-error *ngFor="let error of errors">
+      {{error}}
+    </mat-error>
+  </div>
+  <div *ngIf='done' style='color:green'>
+
+    Vacina adicionado com sucesso
+  </div>
+
+
+  <mat-form-field class="appInput">
+    <input matInput placeholder="Nome" formControlName="name" [errorStateMatcher]="matcher">
+    <!-- <mat-hint></mat-hint> -->
+
+    <mat-error *ngIf="name.hasError('required')">
+      campo Nome  <strong>obrigatorio</strong>
+    </mat-error>
+
+  </mat-form-field>
+  <mat-form-field class="appInput">
+    <input matInput placeholder="Lote" formControlName="lote" [errorStateMatcher]="matcher">
+    <!-- <mat-hint></mat-hint> -->
+
+    <mat-error *ngIf="lote.hasError('required')">
+        campo Lote  <strong>obrigatorio</strong>
+      </mat-error>
+
+  </mat-form-field>
+  <mat-form-field class="appInput">
+    <input matInput placeholder="tipo" formControlName="tipo" [errorStateMatcher]="matcher">
+    <!-- <mat-hint></mat-hint> -->
+
+    <mat-error *ngIf="tipo.hasError('required')">
+        campo Tipo  <strong>obrigatorio</strong>
+    </mat-error>
+
+  </mat-form-field>
+
+  <mat-form-field>
+      <input [min]="minDate" formControlName='data_de_validade' placeholder="Data de Validade" matInput [matDatepicker]="myDatepicker">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+      <!-- <mat-hint>Data de nascimento!</mat-hint> -->
+
+  </mat-form-field>
+  <div>
+
+    <button [disabled]="makeVacinaForm.invalid" type='submit' mat-raised-button color="primary">Criar</button>
+  </div>
+
+
+</form>

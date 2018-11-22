@@ -1,0 +1,97 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+
+    <div class='sidemenu'>
+
+      <mat-list>
+
+        <mat-list-item>
+          <button mat-raised-button [matMenuTriggerFor]="menu"><i class="material-icons">
+              add_box
+            </i>Adicionar</button>
+
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/dashboard/admin/aplicador">
+
+              <i class="material-icons">
+                create
+              </i> Aplicador
+            </button>
+            <button mat-menu-item routerLink="/dashboard/admin/adicionar_posto">
+
+              <i class="material-icons">
+                create
+              </i> Posto
+            </button>
+            <button mat-menu-item routerLink="/dashboard/admin/adicionar_vacina">
+
+              <i class="material-icons">
+                create
+              </i> Vacina
+            </button>
+            <button mat-menu-item routerLink="/dashboard/admin/criar_campanha">
+
+              <i class="material-icons">
+                add_alert
+              </i>
+
+              Campanha
+              de vacinação</button>
+
+          </mat-menu>
+
+        </mat-list-item>
+
+
+        <mat-list-item>
+          <button mat-raised-button [matMenuTriggerFor]="menu_conf">
+
+            <i class="material-icons">
+              ballot
+            </i>
+
+
+            Conferir</button>
+
+
+          <mat-menu #menu_conf="matMenu">
+            <button mat-menu-item routerLink="/dashboard/admin/aplicador">Aplicadores</button>
+            <button mat-menu-item routerLink="/dashboard/admin/adicionar_posto">Postos</button>
+            <button mat-menu-item routerLink="/dashboard/admin/adicionar_vacina"> Vacinas</button>
+            <button mat-menu-item routerLink="/dashboard/admin/criar_campanha">Campanhas de vacinação</button>
+
+          </mat-menu>
+
+        </mat-list-item>
+        <!-- <mat-list-item>
+  
+
+            
+            <button mat-raised-button routerLink="/dashboard/admin/aplicador">Designar aplicador</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-raised-button routerLink="/dashboard/admin/adicionar_posto">Adicionar posto</button>
+          </mat-list-item>
+          <mat-list-item>
+              <button mat-raised-button routerLink="/dashboard/admin/adicionar_vacina">Adicionar Vacinar</button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button mat-raised-button routerLink="/dashboard/admin/criar_campanha">Criar campanha de vacinação</button>
+              </mat-list-item> -->
+        <!-- <mat-list-item> 
+          <button mat-raised-button routerLink="/dashboard/applicator/procura">Procura</button>
+          </mat-list-item> -->
+      </mat-list>
+
+    </div>
+
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class='example-container-user'>
+      <router-outlet></router-outlet>
+
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

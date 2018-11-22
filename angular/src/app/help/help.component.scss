@@ -1,0 +1,56 @@
+.example-headers-align .mat-expansion-panel-header-title, 
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.how-to-help{
+    margin: 20px;
+
+    .header{
+        border: 323px thin black;
+        padding:30px;
+        h1{
+            text-align: center; font-weight: 300;
+            
+            line-height: 56px !important;
+            font-size:36px!important;
+            font: 400 24px/32px Roboto,"Helvetica Neue",sans-serif;
+        }
+        .search{
+            text-align: center;
+            
+            input{
+                background-color: #fff;
+                padding:10px;
+                border-radius: 8px;
+                -webkit-appearance: none;
+                width: 40%;
+                box-shadow: 0px 1px 3px 1px rgba(60,64,67,.15);
+            }
+            
+        }
+    }
+
+ .topics{
+    margin:50px;
+
+ }
+}
+@mixin md-icon-size($size: 24px) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+    line-height: $size;
+  }
+
+.help-mat-icon {
+    color:white;
+    @include md-icon-size(80px);
+  }
+
+

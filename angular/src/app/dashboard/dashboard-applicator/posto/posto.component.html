@@ -1,0 +1,24 @@
+
+<div *ngIf='(dados|async) as posto'>
+
+    
+    <b>Posto</b><pre>
+
+      {{posto.endereco}}
+    </pre>
+    <div *ngIf='(estado|async) as estado'>
+    <b>Estado</b>
+    <pre> 
+      {{estado[0].Nome}}
+
+    </pre>
+      <div *ngIf='(cidade|async) as cidade'>
+    <b>Cidade</b> <pre> 
+      {{ cidade[0].Nome}}
+
+    </pre>
+    
+    </div>
+
+  </div>
+  </div>

@@ -1,0 +1,61 @@
+<h4>
+    Adicionar posto
+  </h4>
+  <p></p>
+  <mat-divider></mat-divider>
+
+<form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="newPostoForm" #formDir="ngForm">
+
+  <div *ngIf='errors '>
+    <mat-error *ngFor="let error of errors">
+      {{error}}
+    </mat-error>
+  </div>
+  <div *ngIf='done' style='color:green'>
+
+    Posto adicionado com sucesso
+  </div>
+
+
+  <mat-form-field class="appInput">
+    <input matInput placeholder="Endereco do posto" formControlName="posto_endereco" [errorStateMatcher]="matcher">
+    <!-- <mat-hint></mat-hint> -->
+
+    <mat-error *ngIf="posto_endereco.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+
+  </mat-form-field>
+
+  <div class='appInput'>
+    <mat-hint>
+
+      Escolha o estado e cidade em que o posto de saude se encontra
+      <br>
+    </mat-hint>
+    <mat-form-field>
+
+      <mat-select formControlName='posto_estado' placeholder='Estado'>
+        <mat-option *ngFor="let estado of estados | async" value="{{estado['ID']}}">{{estado['Nome']}}</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select formControlName='posto_cidade' placeholder='Cidade'>
+
+        <div *ngIf='currentEstadoID.length > 0'>
+
+          <mat-option *ngFor="let cidade of cidades | async |  filterByState: currentEstadoID" value="{{cidade['ID']}}">{{cidade['Nome']}}</mat-option>
+        </div>
+
+      </mat-select>
+    </mat-form-field>
+  </div>
+ 
+    <div>
+
+      <button [disabled]="newPostoForm.invalid" type='submit' mat-raised-button color="primary">Criar</button>
+    </div>
+
+
+</form>

@@ -1,0 +1,31 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+
+    <div class='sidemenu'>
+
+      <mat-list>
+
+        <mat-list-item>
+
+          <button mat-raised-button routerLink="/dashboard/applicator/aplicar">Aplicar</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-raised-button routerLink="/dashboard/applicator/meu-posto">Meu posto</button>
+        </mat-list-item>
+        
+        <!-- <mat-list-item> 
+        <button mat-raised-button routerLink="/dashboard/applicator/procura">Procura</button>
+        </mat-list-item> -->
+      </mat-list>
+
+    </div>
+
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class='example-container-user'>
+      <router-outlet></router-outlet>
+
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
