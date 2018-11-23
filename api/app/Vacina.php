@@ -1,6 +1,7 @@
 <?php
 
 namespace VacinaOnline;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Database\Eloquent\Model;
 class Vacina extends Model
@@ -13,6 +14,15 @@ class Vacina extends Model
     $table->string('name');
     $table->date('data_de_validade');
     */
+    use SoftDeletes;
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['deleted_at'];
+
     protected $fillable = [
 
        'lote','tipo', 'name', 'data_de_validade' 

@@ -14,6 +14,7 @@ class Aplicador extends Model
         'endereco',
     
     ];
+    protected $guarded =[];
 
     function posto(){
 

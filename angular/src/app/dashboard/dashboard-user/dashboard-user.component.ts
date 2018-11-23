@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-user.component.css']
 })
 export class DashboardUserComponent implements OnInit {
-
+  opened: boolean = true;
   constructor() { }
 
   ngOnInit() {

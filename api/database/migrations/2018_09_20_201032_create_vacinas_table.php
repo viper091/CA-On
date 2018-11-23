@@ -20,7 +20,8 @@ class CreateVacinasTable extends Migration
             $table->integer('tipo');
             $table->string('name');
             $table->date('data_de_validade');
-            
+            $table->softDeletes();
+
     
         });
     }

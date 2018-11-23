@@ -27,63 +27,83 @@ import { MakeAplicadorComponent } from '../../dashboard/dashboard-admin/make-apl
 import { MakePostoComponent } from '../../dashboard/dashboard-admin/make-posto/make-posto.component';
 import { MakeVacinaComponent } from '../../dashboard/dashboard-admin/make-vacina/make-vacina.component';
 import { MakeCampanhaComponent } from '../../dashboard/dashboard-admin/make-campanha/make-campanha.component';
+import { ViewAplicadoresComponent } from 'src/app/dashboard/dashboard-admin/view-aplicadores/view-aplicadores.component';
+import { ViewPostosComponent } from 'src/app/dashboard/dashboard-admin/view-postos/view-postos.component';
+import { ViewVacinasComponent } from 'src/app/dashboard/dashboard-admin/view-vacinas/view-vacinas.component';
 
 const appRoutes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'help', component: HelpComponent },
   { path: 'notications', component: HelpComponent },
-  { path: 'reset', component: ResetComponent, canActivate:[GuestGuard] },
-  { path: 'login', component: LoginComponent, canActivate:[GuestGuard] },
-  { path: 'register', component: RegisterComponent, canActivate:[GuestGuard] },
+  { path: 'reset', component: ResetComponent, canActivate: [GuestGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [GuestGuard] },
+  { path: 'register', component: RegisterComponent, canActivate: [GuestGuard] },
   { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard] },
-  { path: 'session-end', component: SessionEndComponent, canActivate: [GuestGuard] },  
+  { path: 'session-end', component: SessionEndComponent, canActivate: [GuestGuard] },
   {
     path: 'dashboard', component: DashboardComponent,
-    
+
     canActivate: [AuthGuard],
     children:
-    [
-      {
-        path: 'user', component: DashboardUserComponent,
-        children:
-        [
-          {path: 'minha-carterinha', component: MinhaCarterinhaComponent},
-          {path: 'dados', component: DadosComponent},
-          {path: 'historico', component:HistoricoComponent}
+      [
+        {
+          path: 'user', component: DashboardUserComponent,
+          children:
+            [
+              { path: 'minha-carterinha', component: MinhaCarterinhaComponent },
+              { path: 'dados', component: DadosComponent },
+              { path: 'historico', component: HistoricoComponent }
 
-        ]
+            ]
 
-      },
-      {
-        path: 'applicator', component: DashboardApplicatorComponent,
-        canActivate: [AuthApplicatorGuard],
-        children:
-        [
-          {path: 'aplicar', component: VacinaApplyComponent},
-          {path: 'meu-posto', component: PostoComponent},
-        
+        },
+        {
+          path: 'applicator', component: DashboardApplicatorComponent,
+          canActivate: [AuthApplicatorGuard],
+          children:
+            [
+              { path: 'aplicar', component: VacinaApplyComponent },
+              { path: 'meu-posto', component: PostoComponent },
 
-        ]
-      },
-      {
-        path: 'admin', component: DashboardAdminComponent,
-        canActivate: [AuthAdminGuard],
-        children:
-        [
-          {path: 'aplicador', component:MakeAplicadorComponent},
-          {path: 'adicionar_posto', component: MakePostoComponent},
-          {path: 'adicionar_vacina', component: MakeVacinaComponent},
-          {path: 'criar_campanha', component: MakeCampanhaComponent},
-        
 
-        ]
-      }
-    ]
+            ]
+        },
+        {
+          path: 'admin', component: DashboardAdminComponent,
+          canActivate: [AuthAdminGuard],
+          children:
+            [
+              {
+                path: 'adicionar',
+                children: [
+
+                  { path: 'aplicador', component: MakeAplicadorComponent },
+                  { path: 'posto', component: MakePostoComponent },
+                  { path: 'vacina', component: MakeVacinaComponent },
+                  { path: 'campanha', component: MakeCampanhaComponent },
+
+                ]
+              },
+              {
+                path: 'ver',
+                children: [
+                  { path: 'aplicadores', component: ViewAplicadoresComponent },
+                  { path: 'postos', component: ViewPostosComponent },
+                  { path: 'vacinas', component: ViewVacinasComponent },
+                ]
+              }
+
+
+
+
+            ]
+        }
+      ]
   },
 
   { path: 'home', component: HomeComponent },
 
-  { path: '', component:HomeComponent, pathMatch: 'full' },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

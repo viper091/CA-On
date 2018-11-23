@@ -1,5 +1,5 @@
 <mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>
+  <mat-drawer [(opened)]="opened" #drawer mode="side" opened>
 
     <div class='sidemenu'>
 
@@ -11,25 +11,25 @@
             </i>Adicionar</button>
 
           <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink="/dashboard/admin/aplicador">
+            <button mat-menu-item routerLink="/dashboard/admin/adicionar/aplicador">
 
               <i class="material-icons">
                 create
               </i> Aplicador
             </button>
-            <button mat-menu-item routerLink="/dashboard/admin/adicionar_posto">
+            <button mat-menu-item routerLink="/dashboard/admin/adicionar/posto">
 
               <i class="material-icons">
                 create
               </i> Posto
             </button>
-            <button mat-menu-item routerLink="/dashboard/admin/adicionar_vacina">
+            <button mat-menu-item routerLink="/dashboard/admin/adicionar/vacina">
 
               <i class="material-icons">
                 create
               </i> Vacina
             </button>
-            <button mat-menu-item routerLink="/dashboard/admin/criar_campanha">
+            <button mat-menu-item routerLink="/dashboard/admin/adicionar/campanha">
 
               <i class="material-icons">
                 add_alert
@@ -55,10 +55,9 @@
 
 
           <mat-menu #menu_conf="matMenu">
-            <button mat-menu-item routerLink="/dashboard/admin/aplicador">Aplicadores</button>
-            <button mat-menu-item routerLink="/dashboard/admin/adicionar_posto">Postos</button>
-            <button mat-menu-item routerLink="/dashboard/admin/adicionar_vacina"> Vacinas</button>
-            <button mat-menu-item routerLink="/dashboard/admin/criar_campanha">Campanhas de vacinação</button>
+            <button mat-menu-item routerLink="/dashboard/admin/ver/aplicadores">Aplicadores</button>
+            <button mat-menu-item routerLink="/dashboard/admin/ver/postos">Postos</button>
+            <button mat-menu-item routerLink="/dashboard/admin/ver/vacinas"> Vacinas</button>
 
           </mat-menu>
 
@@ -89,6 +88,17 @@
   </mat-drawer>
 
   <mat-drawer-content>
+      <button mat-raised-button (click)="drawer.toggle()">
+          <i *ngIf='opened; else closed' class="material-icons">
+              keyboard_arrow_left
+              </i>
+            <ng-template #closed>
+
+              <i  class="material-icons">
+                keyboard_arrow_right
+              </i>
+            </ng-template>
+      </button>
     <div class='example-container-user'>
       <router-outlet></router-outlet>
 

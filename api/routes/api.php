@@ -54,6 +54,9 @@ Route::group([
         'prefix' => 'admin',
     ], function () {
 
+        Route::get('vacinas', 'ApplicatorController@vacinas');
+        Route::get('excluir/vacina/{id}', 'AdminController@excluir_vacina');
+
         Route::post('lancar_campanha', 'AdminController@lancar_campanhas');
         Route::post('criar_posto', 'AdminController@criar_posto');
         Route::post('criar_aplicador', 'AdminController@criar_aplicador');

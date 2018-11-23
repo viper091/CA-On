@@ -1,5 +1,5 @@
 <mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>
+  <mat-drawer [(opened)]="opened" #drawer mode="side" opened>
 
     <div class='sidemenu'>
 
@@ -23,6 +23,17 @@
   </mat-drawer>
 
   <mat-drawer-content>
+      <button mat-raised-button (click)="drawer.toggle()">
+          <i *ngIf='opened; else closed' class="material-icons">
+              keyboard_arrow_left
+              </i>
+            <ng-template #closed>
+
+              <i  class="material-icons">
+                keyboard_arrow_right
+              </i>
+            </ng-template>
+      </button>
     <div class='example-container-user'>
       <router-outlet></router-outlet>
 

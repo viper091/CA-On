@@ -48,4 +48,13 @@ export class AdminCentralService {
   AdicionarVacina(vacina:Vacina){
     return this.http.post(API_BASE_URL+'admin/'+ 'criar_vacina', vacina);
   }
+
+  ObterVacinas(){
+    return this.http.get<Vacina[]>(API_BASE_URL+'admin/'+ 'vacinas');
+
+  }
+  excluir_vacina(id){
+    return this.http.get<Vacina[]>(API_BASE_URL+'admin/'+ 'excluir/vacina/'+id);
+
+  }
 }
