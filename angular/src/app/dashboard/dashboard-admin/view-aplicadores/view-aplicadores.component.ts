@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AdminCentralService } from '../services/admin-central.service';
+import { MatSort, MatTableDataSource } from '@angular/material';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-view-aplicadores',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAplicadoresComponent implements OnInit {
 
-  constructor() { }
+  aplicadoresData: Observable<any> = this.adminService.ObterAplicadores();
+
+  dataSource = new MatTableDataSource();
+  displayedColumns: string[] = [
+    'registro',
+    'posto',
+  ];
+  constructor(private adminService: AdminCentralService) { }
+  @ViewChild(MatSort) sort: MatSort;
+
 
   ngOnInit() {
-  }
 
+
+    this.aplicadoresData.pipe(
+    ).subscribe(
+      data => {
+
+
+        this.dataSource.data = data
+        this.dataSource.sort = this.sort;
+      });
+  }
 }

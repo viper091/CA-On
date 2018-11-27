@@ -3,14 +3,14 @@
   <mat-card>
 
     <p>
-      O C.A.Online. foi criado em 2018 na escola técnica 'ETEC Pedro Ferrreira Alves' 
-      de Mogi Mirim pelos alunos do 3ºAno de informatica para internet José G. 
-      Moreira, Lucas G. Benatti, Pedro H. Honório, Pedro H. Táparo, Vitor E. Perin e 
-      Thiago V. Vergani e nossa principal missão é revolucionar o metódo de registro 
-      da vacinação que atualmente se apresenta com um modelo obsoleto. 
-      
-      Para entrar em contato nos mande uma mensagem no formulario abaixo ou acesse: <a href='fb.com/ca.online'>Facebook</a> 
-      
+      O C.A.Online. foi criado em 2018 na escola técnica 'ETEC Pedro Ferrreira Alves'
+      de Mogi Mirim pelos alunos do 3ºAno de informatica para internet José G.
+      Moreira, Lucas G. Benatti, Pedro H. Honório, Pedro H. Táparo, Vitor E. Perin e
+      Thiago V. Vergani e nossa principal missão é revolucionar o metódo de registro
+      da vacinação que atualmente se apresenta com um modelo obsoleto.
+
+      Para entrar em contato nos mande uma mensagem no formulario abaixo ou acesse: <a href='fb.com/ca.online'>Facebook</a>
+
     </p>
   </mat-card>
 </div>
@@ -19,127 +19,114 @@
 
   <h2>Equipe</h2>
 </div>
-<div>
-    <mat-grid-list  rowHeight="1:{{rowH}}"    gutterSize="{{gutterSize}}"  cols="{{columnNum}}" >
-<mat-grid-tile>
+<div fxLayout="column" class='container'>
+  <div fxLayoutGap="20px" fxLayoutAlign="space-between center" fxLayout="row" fxLayout.xs="column"
+   fxFlex='80' fxLayoutAlign="center center"
+    fxFlex.md="65" class='container'>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Vitor Perin</mat-card-title>
-      <mat-card-subtitle>Desenvolvedor</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image 
-    
-    src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/44155133_1765756040219297_2212296796145713152_n.jpg?_nc_cat=104&_nc_ht=scontent.fcpq2-1.fna&oh=7b84ffecbb5c3f0eb37f337f3c3b293f&oe=5C67866D" alt="Photo of a Shiba Inu">
-    
-    <!-- <mat-card-actions>
+
+    <mat-card fxFlex class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Vitor Perin</mat-card-title>
+        <mat-card-subtitle>Desenvolvedor</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/imagens/about/vitor_capa.jpg"
+        alt="Photo of a Shiba Inu">
+
+      <!-- <mat-card-actions>
       <button mat-button>LIKE</button>
       <button mat-button>SHARE</button>
     </mat-card-actions> -->
-  </mat-card>
-</mat-grid-tile>
-<mat-grid-tile>
- 
-<mat-card class="example-card">
+    </mat-card>
+
+    <mat-card fxFlex class="example-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"   [ngStyle]="{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/20840763_1075708692566129_6840020757547053525_n.jpg?_nc_cat=104&_nc_ht=scontent.fcpq2-1.fna&oh=d0a5499b1ff2087379ad10362f96f4c3&oe=5C7B19BD)'}"
-        ></div>
+        <div mat-card-avatar class="example-header-image" 
+        [ngStyle]="{'background-image':'url(/imagens/about/pedro_perfil.jpg)'}"></div>
         <mat-card-title>Pedro Honorio</mat-card-title>
         <mat-card-subtitle>Gerente</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image 
-      
-      src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/37080570_1300319540105042_717003073049853952_n.jpg?_nc_cat=100&_nc_ht=scontent.fcpq2-1.fna&oh=994b2ede5f2e747d6f569a6a25920753&oe=5C6A627F" alt="Photo of a Shiba Inu">
-      
+      <img mat-card-image src="/imagens/about/pedro_capa.jpg"
+        alt="Photo of a Shiba Inu">
+
       <!-- <mat-card-actions>
         <button mat-button>LIKE</button>
         <button mat-button>SHARE</button>
       </mat-card-actions> -->
     </mat-card>
-</mat-grid-tile>
-<mat-grid-tile>
 
-    <mat-card class="example-card">
+    <mat-card fxFlex class="example-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"  
-         [ngStyle]="{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/42782775_1408150732662737_6414658116138303488_n.jpg?_nc_cat=108&_nc_ht=scontent.fcpq2-1.fna&oh=aa1cd6e2c63bfef566610d8e2b1014d6&oe=5CB0C35E)'}"
-        ></div>
+        <div mat-card-avatar class="example-header-image" 
+        [ngStyle]="{'background-image':'url(/imagens/about/benatti_perfil.jpg)'}"></div>
         <mat-card-title>Lucas Benatti</mat-card-title>
         <mat-card-subtitle>Pesquisador</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image 
-      
-      src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/31688205_1271707306307081_567672802539208704_n.jpg?_nc_cat=101&_nc_ht=scontent.fcpq2-1.fna&oh=2cb18ed541398606c9ed31c9ae97ba31&oe=5C686F0F" alt="Photo of a Shiba Inu">
-      
+      <img mat-card-image src="/imagens/about/benatti_capa.jpg"
+        alt="Photo of a Shiba Inu">
+
       <!-- <mat-card-actions>
         <button mat-button>LIKE</button>
         <button mat-button>SHARE</button>
       </mat-card-actions> -->
     </mat-card>
-  </mat-grid-tile>
 
-  <mat-grid-tile>
-   
-  <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"   [ngStyle]="{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/17353289_1108728809253571_627650078414217455_n.jpg?_nc_cat=111&_nc_ht=scontent.fcpq2-1.fna&oh=245d9e2fed5510dcde4b206f2ed81ab0&oe=5C7A7F64)'}"
-          ></div>
-          <mat-card-title>Pedro Taparo</mat-card-title>
-          <mat-card-subtitle>Designer</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image 
-        
-        src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/14494732_944536549006132_3911954226866763392_n.jpg?_nc_cat=100&_nc_ht=scontent.fcpq2-1.fna&oh=83dd6fcdf44cb9ef89dffda27b7fd693&oe=5CAE11B5" alt="Photo of a Shiba Inu">
-        
-        <!-- <mat-card-actions>
+  </div>
+
+  <div fxLayoutGap="20px" fxLayoutAlign="space-between center"
+   fxLayout="row" fxLayout.xs="column" fxFlex='80' fxLayoutAlign="center center"
+    fxFlex.md="65" class='container'>
+    <mat-card fxFlex class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"
+         [ngStyle]="{'background-image':'url(/imagens/about/taparo_perfil.jpg)'}"></div>
+        <mat-card-title>Pedro Taparo</mat-card-title>
+        <mat-card-subtitle>Designer</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/imagens/about/taparo_capa.jpg"
+        alt="Photo of a Shiba Inu">
+
+      <!-- <mat-card-actions>
           <button mat-button>LIKE</button>
           <button mat-button>SHARE</button>
         </mat-card-actions> -->
-      </mat-card>
-  </mat-grid-tile>
-  
+    </mat-card>
 
 
-  <mat-grid-tile>
-   
-      <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"   [ngStyle]="{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/42194038_1181332025355268_5818248159867961344_n.jpg?_nc_cat=102&_nc_ht=scontent.fcpq2-1.fna&oh=cde75b5954308403e4b2d3bb6be9f54b&oe=5C748DBE)'}"
-              ></div>
-              <mat-card-title>Thiago Silva</mat-card-title>
-              <mat-card-subtitle>Geral</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image 
-            
-            src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/29063061_1029712583850547_3677128953320964096_n.jpg?_nc_cat=101&_nc_ht=scontent.fcpq2-1.fna&oh=d4e4f975b6b7f1771e7039dddf663395&oe=5C67F800" alt="Photo of a Shiba Inu">
-            
-            <!-- <mat-card-actions>
+
+
+    <mat-card fxFlex class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image':'url(/imagens/about/thiago_perfil.jpg)'}"></div>
+        <mat-card-title>Thiago Silva</mat-card-title>
+        <mat-card-subtitle>Geral</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/imagens/about/thiago_capa.jpg"
+        alt="Photo of a Shiba Inu">
+
+      <!-- <mat-card-actions>
               <button mat-button>LIKE</button>
               <button mat-button>SHARE</button>
             </mat-card-actions> -->
-          </mat-card>
-      </mat-grid-tile>
+    </mat-card>
 
 
-  <mat-grid-tile>
-   
-      <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"   [ngStyle]="{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/42194038_1181332025355268_5818248159867961344_n.jpg?_nc_cat=102&_nc_ht=scontent.fcpq2-1.fna&oh=cde75b5954308403e4b2d3bb6be9f54b&oe=5C748DBE)'}"
-              ></div>
-              <mat-card-title>Jose Gabriel</mat-card-title>
-              <mat-card-subtitle>Escriva</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image 
-            
-            src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/29063061_1029712583850547_3677128953320964096_n.jpg?_nc_cat=101&_nc_ht=scontent.fcpq2-1.fna&oh=d4e4f975b6b7f1771e7039dddf663395&oe=5C67F800" alt="Photo of a Shiba Inu">
-    
-            <!-- <mat-card-actions>
+
+    <mat-card fxFlex class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image':'url(/imagens/about/jose_perfil.png)'}"></div>
+        <mat-card-title>Jose Gabriel</mat-card-title>
+        <mat-card-subtitle>Escriva</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/imagens/about/jose_capa.jpg"
+        alt="Photo of a Shiba Inu">
+
+      <!-- <mat-card-actions>
               <button mat-button>LIKE</button>
               <button mat-button>SHARE</button>
             </mat-card-actions> -->
-          </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+    </mat-card>
+  </div>
+
 </div>

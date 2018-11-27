@@ -57,4 +57,12 @@ export class AdminCentralService {
     return this.http.get<Vacina[]>(API_BASE_URL+'admin/'+ 'excluir/vacina/'+id);
 
   }
+
+  ObterTodosPostos(){
+    return this.http.get<PostoModel[]>(API_BASE_URL+'admin/'+ 'postos');
+
+  }
+  ObterAplicadores(){
+    return this.http.get(API_BASE_URL+'admin/'+ 'aplicadores');
+  }
 }

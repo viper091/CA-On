@@ -1,166 +1,185 @@
 <app-e-header>
-    <app-e-header-title>
-        <div>
-            <h1>
+  <app-e-header-title>
+    <div>
+      <h1>
 
-                Carteira de Vacinação Online
-            </h1>
-            <h2 style='font-size: 18px;
+        Carteira de Vacinação Online
+      </h1>
+      <h2 style='font-size: 18px;
                         font-weight: 300;
                         line-height: 28px;'>
-                Saia do passado, tenha acesso a sua carterinha de vacinação a qualquer monento!
-            </h2>
+        Saia do passado, tenha acesso a sua carterinha de vacinação a qualquer monento!
+      </h2>
 
 
-            <button mat-raised-button routerLink='/login'> Não perca mais tempo!</button>
-        </div>
+      <button mat-raised-button routerLink='/login'> Não perca mais tempo!</button>
+    </div>
 
 
 
-    </app-e-header-title>
+  </app-e-header-title>
 
 
 
 </app-e-header>
-<mat-sidenav-container class="example-container">
-    <ngx-hm-carousel [(ngModel)]="index" [autoplay-speed]="3000" [autoplay]="true" [infinite]="infinite" [between-delay]="2000"
-        class="carousel c-accent">
+<mat-sidenav-container ngClass="example-container" ngClass.xs="example-container-m">
+  <ngx-hm-carousel [(ngModel)]="index" [autoplay-speed]="3000" [autoplay]="true" [infinite]="infinite" [between-delay]="2000"
+    ngClass="carousel c-accent" ngClass.xs='carousel-mobile'>
 
 
 
-        <section ngx-hm-carousel-container class="content">
-            <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/picada.png)'}"> 
+    <section ngx-hm-carousel-container class="content">
+      <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/picada.png)'}">
 
 
-                <div class='img'>
+        <div class='img'>
 
-                    <div class='titulo'>
-
-
-                        <h1>
-                            Ministério da Saúde confirma 1,5 mil casos de sarampo no país
-                        </h1>
-                    </div>
-
-                    <p>
+          <div class='titulo'>
 
 
-                        Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues, afirmou nesta segunda-feira,
-                        18, estar em estudo pela pasta uma proposta para tornar obrigatória a vacinação das crianças pelo
-                        País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o Ministério da Educação
-                        para transformar a carteira de imunização em pré-requisito da matrícula escolar. Pela regra geral,
-                        há apenas uma recomendação de que o certificado seja apresentado. “Estratégias pontuais já foram
-                        adotadas por algumas Assembleias Legislativas. Será que não é o momento de o ministério, com o MEC,
-                        tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de vacinação acompanhada?
-                        ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da República para discutir
-                        os baixos indicadores de vacinação.
+            <h1>
+              Ministério da Saúde confirma 1,5 mil casos de sarampo no país
+            </h1>
+          </div>
 
-                    </p>
+          <p>
 
 
+            Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues,
+            afirmou nesta segunda-feira,
+            18, estar em estudo pela pasta uma proposta para tornar obrigatória a vacinação das crianças pelo
+            País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o Ministério da Educação
+            para transformar a carteira de imunização em pré-requisito da matrícula escolar. Pela regra geral,
+            há apenas uma recomendação de que o certificado seja apresentado. “Estratégias pontuais já foram
+            adotadas por algumas Assembleias Legislativas. Será que não é o momento de o ministério, com o MEC,
+            tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de vacinação acompanhada?
+            ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da República para discutir
+            os baixos indicadores de vacinação.
 
-                </div>
-            </article>
-            <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/2.jpg)'}">
-
-
-                <div class='img'>
-
-                    <div class='titulo'>
-
-
-                        <h1>
-                                Farmácias e drogarias são autorizadas a aplicar vacinas em SP
-                             </h1>
-                    </div>
-
-                    <p>
-
-                            São Paulo – As farmácias e drogarias vão passar a integrar a rede de locais para vacinação na cidade de São Paulo. Segundo a Secretaria Municipal da Saúde, as unidades poderão ser cadastradas no Cadastro Nacional dos Estabelecimentos de Saúde (CNES) para ter o licenciamento sanitário para realizar o serviço de imunização.
-                            A capital já conta com a lei municipal nº 16.739/2017, que regulamenta a aplicação das vacinas nesses estabelecimentos. A pasta informou que houve uma mobilização da secretaria com o Conselho Regional de Farmácia do Estado de São Paulo (CRF-SP) e da Associação Brasileira de Redes de Farmácias e Drogarias (Abrafarma) para viabilizar o cadastramento junto ao Ministério da Saúde.
-
-                    </p>
+          </p>
 
 
 
-                </div>
-            </article>
-
-            <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/3.jpg)'}">
-
-
-                <div class='img'>
-
-                    <div class='titulo'>
+        </div>
+      </article>
+      <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/2.jpg)'}">
 
 
-                        <h1>
-                                Com 1,6 mil casos, Brasil luta para evitar novo surto de sarampo
-                            </h1>
-                    </div>
+        <div class='img'>
 
-                    <p>
-
-                            São Paulo — O governo federal enfrenta um novo desafio em relação à saúde pública dos brasileiros: a ameaça de um novo surto de sarampo no país. Nesta semana, o Ministério da Saúde divulgou que já foram confirmados 1,6 mil casos da doença viral. Outros 7 mil ainda estão em investigação, segundo o órgão. 
-                            A infecção, causada por um vírus altamente contagioso, havia sido considerada erradicada no Brasil em 2016 pela Organização Mundial da Saúde (OMS). 
-                            Nesta nova incidência, os estados que concentram o maior número de casos são Amazonas, com 1,3 mil pessoas infectadas, e Roraima, que registrou 301 ocorrências. Até o momento, as duas regiões foram as únicas que reportaram mortes em decorrência do sarampo, com quatro vítimas em cada estado.
-                
-                    </p>
+          <div class='titulo'>
 
 
+            <h1>
+              Farmácias e drogarias são autorizadas a aplicar vacinas em SP
+            </h1>
+          </div>
 
-                </div>
-            </article>
+          <p>
 
-            <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/4.jpg)'}">
+            São Paulo – As farmácias e drogarias vão passar a integrar a rede de locais para vacinação na cidade de São
+            Paulo. Segundo a Secretaria Municipal da Saúde, as unidades poderão ser cadastradas no Cadastro Nacional
+            dos Estabelecimentos de Saúde (CNES) para ter o licenciamento sanitário para realizar o serviço de
+            imunização.
+            A capital já conta com a lei municipal nº 16.739/2017, que regulamenta a aplicação das vacinas nesses
+            estabelecimentos. A pasta informou que houve uma mobilização da secretaria com o Conselho Regional de
+            Farmácia do Estado de São Paulo (CRF-SP) e da Associação Brasileira de Redes de Farmácias e Drogarias
+            (Abrafarma) para viabilizar o cadastramento junto ao Ministério da Saúde.
 
-
-                <div class='img'>
-
-                    <div class='titulo'>
-
-
-                        <h1>
-                                Governo estuda tornar obrigatória vacinação de crianças
-                            </h1>
-                    </div>
-
-                    <p>
-                            Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues, afirmou nesta segunda-feira, 18, estar em estudo pela pasta uma proposta para tornar obrigatória a vacinação das crianças pelo País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o Ministério da Educação para transformar a carteira de imunização em pré-requisito da matrícula escolar. Pela regra geral, há apenas uma recomendação de que o certificado seja apresentado.
-                            
-                            “Estratégias pontuais já foram adotadas por algumas Assembleias Legislativas. Será que não é o momento de o ministério, com o MEC, tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de vacinação acompanhada? ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da República para discutir os baixos indicadores de vacinação.
-                            
-                    </p>
+          </p>
 
 
 
-                </div>
-            </article>
+        </div>
+      </article>
 
-      
-        </section>
+      <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/3.jpg)'}">
 
-        <ng-template #carouselPrev>
-            <div class="click-area">
-                <i class="material-icons">keyboard_arrow_left</i>
-            </div>
-        </ng-template>
-        <ng-template #carouselNext>
-            <div class="click-area">
-                <i class="material-icons">keyboard_arrow_right</i>
-            </div>
-        </ng-template>
 
-        <ng-template #carouselDot let-model>
-            <div class="ball bg-accent" [class.visible]="model.index === model.currentIndex"></div>
-        </ng-template>
+        <div class='img'>
 
-        <ng-template #carouselProgress let-progress>
-            <div class="progress" *ngIf="progress > 0" [style.width]="(direction==='right' ? progress : 100 - progress) + '%'"></div>
-        </ng-template>
+          <div class='titulo'>
 
-    </ngx-hm-carousel>
-    <!-- 
+
+            <h1>
+              Com 1,6 mil casos, Brasil luta para evitar novo surto de sarampo
+            </h1>
+          </div>
+
+          <p>
+
+            São Paulo — O governo federal enfrenta um novo desafio em relação à saúde pública dos brasileiros: a ameaça
+            de um novo surto de sarampo no país. Nesta semana, o Ministério da Saúde divulgou que já foram confirmados
+            1,6 mil casos da doença viral. Outros 7 mil ainda estão em investigação, segundo o órgão. 
+            A infecção, causada por um vírus altamente contagioso, havia sido considerada erradicada no Brasil em 2016
+            pela Organização Mundial da Saúde (OMS). 
+            Nesta nova incidência, os estados que concentram o maior número de casos são Amazonas, com 1,3 mil pessoas
+            infectadas, e Roraima, que registrou 301 ocorrências. Até o momento, as duas regiões foram as únicas que
+            reportaram mortes em decorrência do sarampo, com quatro vítimas em cada estado.
+
+          </p>
+
+
+
+        </div>
+      </article>
+
+      <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/4.jpg)'}">
+
+
+        <div class='img'>
+
+          <div class='titulo'>
+
+
+            <h1>
+              Governo estuda tornar obrigatória vacinação de crianças
+            </h1>
+          </div>
+
+          <p>
+            Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues,
+            afirmou nesta segunda-feira, 18, estar em estudo pela pasta uma proposta para tornar obrigatória
+            a vacinação das crianças pelo País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o
+            Ministério da Educação para transformar a carteira de imunização em pré-requisito da matrícula escolar.
+            Pela regra geral, há apenas uma recomendação de que o certificado seja apresentado.
+
+            “Estratégias pontuais já foram adotadas por algumas Assembleias Legislativas. Será que não é o momento de o
+            ministério, com o MEC, tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de
+            vacinação acompanhada? ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da
+            República para discutir os baixos indicadores de vacinação.
+
+          </p>
+
+
+
+        </div>
+      </article>
+
+
+    </section>
+
+    <ng-template #carouselPrev>
+      <div class="click-area">
+        <i class="material-icons">keyboard_arrow_left</i>
+      </div>
+    </ng-template>
+    <ng-template #carouselNext>
+      <div class="click-area">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </div>
+    </ng-template>
+
+    <ng-template #carouselDot let-model>
+      <div class="ball bg-accent" [class.visible]="model.index === model.currentIndex"></div>
+    </ng-template>
+
+    <ng-template #carouselProgress let-progress>
+      <div class="progress" *ngIf="progress > 0" [style.width]="(direction==='right' ? progress : 100 - progress) + '%'"></div>
+    </ng-template>
+
+  </ngx-hm-carousel>
+  <!-- 
     <div ngClass="home-content full-inline full-block" [ngClass.xs]="{'full-inline':false, 'full-block':true}" [ngClass.sm]="{'full-inline':false, 'full-block':true}"
         [ngClass.md]="{'full-inline':true, 'full-block':false}" [ngClass.lg]="{'full-inline':true, 'full-block':false}">
         <div >
@@ -244,25 +263,53 @@
         </div>
     </div> -->
 
-    <mat-card class='additional-info'>
+  <mat-card class='additional-info'>
 
 
-        <mat-card-title>
-            Nunca mais perca a carteira de vacinação
-            <!-- This fils the remaining space of the current row -->
-        </mat-card-title>
-        <mat-card-subtitle>
+    <mat-card-title>
+      Nunca mais perca a carteira de vacinação
+      <!-- This fils the remaining space of the current row -->
+    </mat-card-title>
+    <mat-card-subtitle>
 
-        </mat-card-subtitle>
-        <mat-card-content>
-            <div>
-                O sistema mantem seu dados em segurança, eles jamais serão perdidos ou alterados sem sua permissão
-            </div>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <div>
+        O sistema mantem seu dados em segurança, eles jamais serão perdidos ou alterados sem sua permissão
+      </div>
 
-        </mat-card-content>
+    </mat-card-content>
 
-    </mat-card>
+  </mat-card>
 
+
+  <div ngClass='example-container' fxLayout="column">
+    <div ngFlex fxLayoutAlign="space-between center" fxLayout="row">
+      <div ngFlex='100'>
+        <img width="50%" height='30%' src='/imagens/home/pic01.jpeg'>
+      </div>
+      <div ngFlex>
+        <mat-card>
+
+          Acesse a qualquer momento sua carterinha de vacinação em apenas poucos segundos
+        </mat-card>
+      </div>
+    </div>
+
+    <div ngFlex fxLayoutAlign="center center" fxLayout="row">
+        <div  >
+          <mat-card>
+  
+            Tudo fica salvo com segurança em nosso banco de dados!
+          </mat-card>
+        </div>
+      <div ngFlex >
+        <img style='    margin-left: 50%;'        width="50%"  height='30%' src='/imagens/home/pic02.jpeg'>
+      </div>
+    </div>
+
+
+  </div>
 
 
 

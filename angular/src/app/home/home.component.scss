@@ -1,8 +1,4 @@
-img{
-    width: 100%;
-    filter: blur(3px);
 
-}
 .default-margin-home{
     margin:1em;
     padding:2em;
@@ -63,7 +59,9 @@ img{
     margin:4em;
     flex:1 !important;
 }
-
+.example-container-m{
+    flex:1 !important;
+}
 .carousel {
     width: 100%;
     height: 600px;
@@ -129,6 +127,102 @@ img{
         background-position: center;
         height: 0;
         padding-bottom: 100%;
+      }
+    }
+    .ball {
+      width: 10px;
+      height: 10px;
+      border-radius: app-border-radius(cycle);
+      background: black;
+      border: 2px solid;
+
+      opacity: 0.5;
+      &.visible {
+        opacity: 1;
+      }
+    }
+    &.transition {
+      transition: all .4s ease-in-out;
+    }
+    .progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: #00d1b2;
+    }
+    .click-area {
+      width: 50px;
+      text-align: center;
+      i {
+        font-size: 3em;
+      }
+    }
+  }
+
+
+  .carousel-mobile{
+    // width: 100%;
+    // height: 600px;
+
+  article{
+        background-size: contain;
+         background-position: center; 
+    
+    }
+
+    .titulo{
+        z-index: random($limit: 1000);
+        text-shadow: 1px 1px black;
+        color:white;
+        text-align: center;
+        width: 100%;
+        font-size:35px;
+          // position: absolute;
+          @media only screen and (max-width: 699px)  {
+            font-size:10px;
+
+          }
+          @media only screen and (min-width: 700px)  {
+            // font-size:20px;
+
+          }
+    }
+    p{
+        color:white;
+        font-stretch: wider;
+        padding:2em;
+        margin:1em 1em 1em 1em;
+        background-color: rgba(0, 0, 0, 0.493);
+         z-index: random($limit: 1000);
+          // position: absolute;
+        bottom: 63%;
+        font-size: x-small;
+    
+  
+    }
+   
+    .content {
+      display: flex;
+      .item {
+        width: 100%;
+        display: block;
+
+      }
+    }
+    .item {
+      width: 100%;
+      display: block;
+
+      .img {
+        width: 100%;
+        display: block;
+        
+        background-size: cover;
+        background-position: center;
+        height: 0;
+        padding-bottom: 80%;
       }
     }
     .ball {

@@ -24,10 +24,12 @@ class APILoginController extends Controller
         try{
             JWTAuth::invalidate(JWTAuth::getToken());
 
+            return response()->json(['message' => 'Logout feito com sucesso'  ]);
         }
      catch (JWTException $e) {
-        return response()->json(['message' => 'could_not_logout'], 500);
-    }        return response()->json(['message' => 'Successfully logged out']);
+        return response()->json(['message' => 'Um erro ocorreu' ], 500);
+    }     
+
 
     }
     public function login(Request $request)
@@ -42,10 +44,10 @@ class APILoginController extends Controller
         $credentials = $request->only('email', 'password');
         try {
             if (! $token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'invalid_credentials'], 401);
+                return response()->json(['error' => __('auth.failed')], 401);
             }
         } catch (JWTException $e) {
-            return response()->json(['error' => 'could_not_create_token'], 500);
+            return response()->json(['error' => __('auth.error')], 500);
         }
         
         return response()->json(compact('token'));

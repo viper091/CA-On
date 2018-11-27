@@ -416,7 +416,7 @@ function cacheable(o) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-card {\n\n    /* margin:3px; */\n    /* padding-top: 3px; */\n    /* padding-bottom: 3px; */\n\n  }\n  mat-card img{\n    -o-object-fit: cover;\n       object-fit: cover; /*this makes de image in src fit to the size of specified below*/\n    height: 80%;\n    width: 100%;\n    max-width: 250px;\n    max-height: 250px;\n  }\n  .example-header-image {\n    background-image: url('https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/33783343_1574766679318235_2668800963002761216_n.jpg?_nc_cat=102&_nc_ht=scontent.fcpq2-1.fna&oh=9c45a7de07c47adf5f388ef9c6a609f5&oe=5CABD32A');\n    background-size: cover;\n  }\n  img{\n\n      /* width: 337px; */\n      /* height:335px; */\n  }\n  .equipe{\n      text-align: center;\n      margin-bottom:4px;\n      margin: 20px;\n  }\n  .ideia{\n    text-align: center;\n    margin: 20px; \n    \n  }\n  .ideia p {\n     font:400 1em Roboto,\"Helvetica Neue\",sans-serif;\n\n  }\n  h2{\n    font-weight: 300;\n    line-height: 56px !important;\n    font-size: 36px !important;\n    font: 400 24px/32px Roboto,\"Helvetica Neue\",sans-serif;\n}"
+module.exports = ".example-card {\n    /* margin:3px; */\n    /* padding-top: 3px; */\n    /* padding-bottom: 3px; */\n    max-width: 300px;\n  }\n  mat-card img{\n    -o-object-fit: cover;\n       object-fit: cover; /*this makes de image in src fit to the size of specified below*/\n    height: 80%;\n    /* width: 100%; */\n    max-width: 300px;\n    max-height: 200px;\n    min-height: 200px;\n  }\n  .example-header-image {\n    background-image: url(\"/imagens/about/vitor_perfil.jpg\");\n    background-size: cover;\n  }\n  img{\n\n       width: 337px; \n       height:335px; \n  }\n  .equipe{\n      text-align: center;\n      margin-bottom:4px;\n      margin: 20px;\n  }\n  .container{\n    /* display: inline-flex; */\n    display: flex;\n    margin: 3px;\n  }\n  mat-card {\n    align-items: center;\n  }\n  .ideia{\n    text-align: center;\n    margin: 20px; \n    \n  }\n  .ideia p {\n     font:400 1em Roboto,\"Helvetica Neue\",sans-serif;\n\n  }\n  h2{\n    font-weight: 300;\n    line-height: 56px !important;\n    font-size: 36px !important;\n    font: 400 24px/32px Roboto,\"Helvetica Neue\",sans-serif;\n}"
 
 /***/ }),
 
@@ -427,7 +427,7 @@ module.exports = ".example-card {\n\n    /* margin:3px; */\n    /* padding-top: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='ideia'>\n  <h2>Ideia</h2>\n  <mat-card>\n\n    <p>\n      O C.A.Online. foi criado em 2018 na escola técnica 'ETEC Pedro Ferrreira Alves' \n      de Mogi Mirim pelos alunos do 3ºAno de informatica para internet José G. \n      Moreira, Lucas G. Benatti, Pedro H. Honório, Pedro H. Táparo, Vitor E. Perin e \n      Thiago V. Vergani e nossa principal missão é revolucionar o metódo de registro \n      da vacinação que atualmente se apresenta com um modelo obsoleto. \n      \n      Para entrar em contato nos mande uma mensagem no formulario abaixo ou acesse: <a href='fb.com/ca.online'>Facebook</a> \n      \n    </p>\n  </mat-card>\n</div>\n\n<div class='equipe'>\n\n  <h2>Equipe</h2>\n</div>\n<div>\n    <mat-grid-list  rowHeight=\"1:{{rowH}}\"    gutterSize=\"{{gutterSize}}\"  cols=\"{{columnNum}}\" >\n<mat-grid-tile>\n\n  <mat-card class=\"example-card\">\n    <mat-card-header>\n      <div mat-card-avatar class=\"example-header-image\"></div>\n      <mat-card-title>Vitor Perin</mat-card-title>\n      <mat-card-subtitle>Desenvolvedor</mat-card-subtitle>\n    </mat-card-header>\n    <img mat-card-image \n    \n    src=\"https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/44155133_1765756040219297_2212296796145713152_n.jpg?_nc_cat=104&_nc_ht=scontent.fcpq2-1.fna&oh=7b84ffecbb5c3f0eb37f337f3c3b293f&oe=5C67866D\" alt=\"Photo of a Shiba Inu\">\n    \n    <!-- <mat-card-actions>\n      <button mat-button>LIKE</button>\n      <button mat-button>SHARE</button>\n    </mat-card-actions> -->\n  </mat-card>\n</mat-grid-tile>\n<mat-grid-tile>\n \n<mat-card class=\"example-card\">\n      <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\"   [ngStyle]=\"{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/20840763_1075708692566129_6840020757547053525_n.jpg?_nc_cat=104&_nc_ht=scontent.fcpq2-1.fna&oh=d0a5499b1ff2087379ad10362f96f4c3&oe=5C7B19BD)'}\"\n        ></div>\n        <mat-card-title>Pedro Honorio</mat-card-title>\n        <mat-card-subtitle>Gerente</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image \n      \n      src=\"https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/37080570_1300319540105042_717003073049853952_n.jpg?_nc_cat=100&_nc_ht=scontent.fcpq2-1.fna&oh=994b2ede5f2e747d6f569a6a25920753&oe=5C6A627F\" alt=\"Photo of a Shiba Inu\">\n      \n      <!-- <mat-card-actions>\n        <button mat-button>LIKE</button>\n        <button mat-button>SHARE</button>\n      </mat-card-actions> -->\n    </mat-card>\n</mat-grid-tile>\n<mat-grid-tile>\n\n    <mat-card class=\"example-card\">\n      <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\"  \n         [ngStyle]=\"{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/42782775_1408150732662737_6414658116138303488_n.jpg?_nc_cat=108&_nc_ht=scontent.fcpq2-1.fna&oh=aa1cd6e2c63bfef566610d8e2b1014d6&oe=5CB0C35E)'}\"\n        ></div>\n        <mat-card-title>Lucas Benatti</mat-card-title>\n        <mat-card-subtitle>Pesquisador</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image \n      \n      src=\"https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/31688205_1271707306307081_567672802539208704_n.jpg?_nc_cat=101&_nc_ht=scontent.fcpq2-1.fna&oh=2cb18ed541398606c9ed31c9ae97ba31&oe=5C686F0F\" alt=\"Photo of a Shiba Inu\">\n      \n      <!-- <mat-card-actions>\n        <button mat-button>LIKE</button>\n        <button mat-button>SHARE</button>\n      </mat-card-actions> -->\n    </mat-card>\n  </mat-grid-tile>\n\n  <mat-grid-tile>\n   \n  <mat-card class=\"example-card\">\n        <mat-card-header>\n          <div mat-card-avatar class=\"example-header-image\"   [ngStyle]=\"{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/17353289_1108728809253571_627650078414217455_n.jpg?_nc_cat=111&_nc_ht=scontent.fcpq2-1.fna&oh=245d9e2fed5510dcde4b206f2ed81ab0&oe=5C7A7F64)'}\"\n          ></div>\n          <mat-card-title>Pedro Taparo</mat-card-title>\n          <mat-card-subtitle>Designer</mat-card-subtitle>\n        </mat-card-header>\n        <img mat-card-image \n        \n        src=\"https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/14494732_944536549006132_3911954226866763392_n.jpg?_nc_cat=100&_nc_ht=scontent.fcpq2-1.fna&oh=83dd6fcdf44cb9ef89dffda27b7fd693&oe=5CAE11B5\" alt=\"Photo of a Shiba Inu\">\n        \n        <!-- <mat-card-actions>\n          <button mat-button>LIKE</button>\n          <button mat-button>SHARE</button>\n        </mat-card-actions> -->\n      </mat-card>\n  </mat-grid-tile>\n  \n\n\n  <mat-grid-tile>\n   \n      <mat-card class=\"example-card\">\n            <mat-card-header>\n              <div mat-card-avatar class=\"example-header-image\"   [ngStyle]=\"{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/42194038_1181332025355268_5818248159867961344_n.jpg?_nc_cat=102&_nc_ht=scontent.fcpq2-1.fna&oh=cde75b5954308403e4b2d3bb6be9f54b&oe=5C748DBE)'}\"\n              ></div>\n              <mat-card-title>Thiago Silva</mat-card-title>\n              <mat-card-subtitle>Geral</mat-card-subtitle>\n            </mat-card-header>\n            <img mat-card-image \n            \n            src=\"https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/29063061_1029712583850547_3677128953320964096_n.jpg?_nc_cat=101&_nc_ht=scontent.fcpq2-1.fna&oh=d4e4f975b6b7f1771e7039dddf663395&oe=5C67F800\" alt=\"Photo of a Shiba Inu\">\n            \n            <!-- <mat-card-actions>\n              <button mat-button>LIKE</button>\n              <button mat-button>SHARE</button>\n            </mat-card-actions> -->\n          </mat-card>\n      </mat-grid-tile>\n\n\n  <mat-grid-tile>\n   \n      <mat-card class=\"example-card\">\n            <mat-card-header>\n              <div mat-card-avatar class=\"example-header-image\"   [ngStyle]=\"{'background-image':'url(https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/42194038_1181332025355268_5818248159867961344_n.jpg?_nc_cat=102&_nc_ht=scontent.fcpq2-1.fna&oh=cde75b5954308403e4b2d3bb6be9f54b&oe=5C748DBE)'}\"\n              ></div>\n              <mat-card-title>Jose Gabriel</mat-card-title>\n              <mat-card-subtitle>Escriva</mat-card-subtitle>\n            </mat-card-header>\n            <img mat-card-image \n            \n            src=\"https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/29063061_1029712583850547_3677128953320964096_n.jpg?_nc_cat=101&_nc_ht=scontent.fcpq2-1.fna&oh=d4e4f975b6b7f1771e7039dddf663395&oe=5C67F800\" alt=\"Photo of a Shiba Inu\">\n    \n            <!-- <mat-card-actions>\n              <button mat-button>LIKE</button>\n              <button mat-button>SHARE</button>\n            </mat-card-actions> -->\n          </mat-card>\n      </mat-grid-tile>\n    </mat-grid-list>\n</div>"
+module.exports = "<div class='ideia'>\n  <h2>Ideia</h2>\n  <mat-card>\n\n    <p>\n      O C.A.Online. foi criado em 2018 na escola técnica 'ETEC Pedro Ferrreira Alves'\n      de Mogi Mirim pelos alunos do 3ºAno de informatica para internet José G.\n      Moreira, Lucas G. Benatti, Pedro H. Honório, Pedro H. Táparo, Vitor E. Perin e\n      Thiago V. Vergani e nossa principal missão é revolucionar o metódo de registro\n      da vacinação que atualmente se apresenta com um modelo obsoleto.\n\n      Para entrar em contato nos mande uma mensagem no formulario abaixo ou acesse: <a href='fb.com/ca.online'>Facebook</a>\n\n    </p>\n  </mat-card>\n</div>\n\n<div class='equipe'>\n\n  <h2>Equipe</h2>\n</div>\n<div fxLayout=\"column\" class='container'>\n  <div fxLayoutGap=\"20px\" fxLayoutAlign=\"space-between center\" fxLayout=\"row\" fxLayout.xs=\"column\"\n   fxFlex='80' fxLayoutAlign=\"center center\"\n    fxFlex.md=\"65\" class='container'>\n\n\n    <mat-card fxFlex class=\"example-card\">\n      <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\"></div>\n        <mat-card-title>Vitor Perin</mat-card-title>\n        <mat-card-subtitle>Desenvolvedor</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image src=\"/imagens/about/vitor_capa.jpg\"\n        alt=\"Photo of a Shiba Inu\">\n\n      <!-- <mat-card-actions>\n      <button mat-button>LIKE</button>\n      <button mat-button>SHARE</button>\n    </mat-card-actions> -->\n    </mat-card>\n\n    <mat-card fxFlex class=\"example-card\">\n      <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\" \n        [ngStyle]=\"{'background-image':'url(/imagens/about/pedro_perfil.jpg)'}\"></div>\n        <mat-card-title>Pedro Honorio</mat-card-title>\n        <mat-card-subtitle>Gerente</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image src=\"/imagens/about/pedro_capa.jpg\"\n        alt=\"Photo of a Shiba Inu\">\n\n      <!-- <mat-card-actions>\n        <button mat-button>LIKE</button>\n        <button mat-button>SHARE</button>\n      </mat-card-actions> -->\n    </mat-card>\n\n    <mat-card fxFlex class=\"example-card\">\n      <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\" \n        [ngStyle]=\"{'background-image':'url(/imagens/about/benatti_perfil.jpg)'}\"></div>\n        <mat-card-title>Lucas Benatti</mat-card-title>\n        <mat-card-subtitle>Pesquisador</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image src=\"/imagens/about/benatti_capa.jpg\"\n        alt=\"Photo of a Shiba Inu\">\n\n      <!-- <mat-card-actions>\n        <button mat-button>LIKE</button>\n        <button mat-button>SHARE</button>\n      </mat-card-actions> -->\n    </mat-card>\n\n  </div>\n\n  <div fxLayoutGap=\"20px\" fxLayoutAlign=\"space-between center\"\n   fxLayout=\"row\" fxLayout.xs=\"column\" fxFlex='80' fxLayoutAlign=\"center center\"\n    fxFlex.md=\"65\" class='container'>\n    <mat-card fxFlex class=\"example-card\">\n      <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\"\n         [ngStyle]=\"{'background-image':'url(/imagens/about/taparo_perfil.jpg)'}\"></div>\n        <mat-card-title>Pedro Taparo</mat-card-title>\n        <mat-card-subtitle>Designer</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image src=\"/imagens/about/taparo_capa.jpg\"\n        alt=\"Photo of a Shiba Inu\">\n\n      <!-- <mat-card-actions>\n          <button mat-button>LIKE</button>\n          <button mat-button>SHARE</button>\n        </mat-card-actions> -->\n    </mat-card>\n\n\n\n\n    <mat-card fxFlex class=\"example-card\">\n      <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\" [ngStyle]=\"{'background-image':'url(/imagens/about/thiago_perfil.jpg)'}\"></div>\n        <mat-card-title>Thiago Silva</mat-card-title>\n        <mat-card-subtitle>Geral</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image src=\"/imagens/about/thiago_capa.jpg\"\n        alt=\"Photo of a Shiba Inu\">\n\n      <!-- <mat-card-actions>\n              <button mat-button>LIKE</button>\n              <button mat-button>SHARE</button>\n            </mat-card-actions> -->\n    </mat-card>\n\n\n\n    <mat-card fxFlex class=\"example-card\">\n      <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\" [ngStyle]=\"{'background-image':'url(/imagens/about/jose_perfil.png)'}\"></div>\n        <mat-card-title>Jose Gabriel</mat-card-title>\n        <mat-card-subtitle>Escriva</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image src=\"/imagens/about/jose_capa.jpg\"\n        alt=\"Photo of a Shiba Inu\">\n\n      <!-- <mat-card-actions>\n              <button mat-button>LIKE</button>\n              <button mat-button>SHARE</button>\n            </mat-card-actions> -->\n    </mat-card>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -442,7 +442,6 @@ module.exports = "<div class='ideia'>\n  <h2>Ideia</h2>\n  <mat-card>\n\n    <p>
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsComponent", function() { return AboutUsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -453,34 +452,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var AboutUsComponent = /** @class */ (function () {
-    function AboutUsComponent(media) {
-        var _this = this;
-        this.columnNum = 3;
-        this.gutterSize = '3px';
-        this.rowH = '1';
-        media.asObservable()
-            .subscribe(function (change) {
-            // alert(change.mqAlias);  
-            console.log(change.mqAlias);
-            if (change.mqAlias == 'xs') {
-                _this.columnNum = 1;
-                _this.rowH = '1';
-            }
-            else if (change.mqAlias == 'sm') {
-                _this.columnNum = 2;
-                _this.rowH = '0.7';
-            }
-            else if (change.mqAlias == 'md') {
-                _this.columnNum = 2;
-                _this.rowH = '0.7';
-            }
-            else {
-                _this.columnNum = 3;
-                _this.rowH = '0.8';
-            }
-        });
+    function AboutUsComponent() {
     }
     AboutUsComponent.prototype.ngOnInit = function () { };
     AboutUsComponent = __decorate([
@@ -489,7 +462,7 @@ var AboutUsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./about-us.component.html */ "./src/app/about-us/about-us.component.html"),
             styles: [__webpack_require__(/*! ./about-us.component.css */ "./src/app/about-us/about-us.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_flex_layout__WEBPACK_IMPORTED_MODULE_1__["ObservableMedia"]])
+        __metadata("design:paramtypes", [])
     ], AboutUsComponent);
     return AboutUsComponent;
 }());
@@ -788,6 +761,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/esm5/portal.es5.js");
 /* harmony import */ var _notifications_service_pusher_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./notifications/service/pusher.service */ "./src/app/notifications/service/pusher.service.ts");
 /* harmony import */ var _api_services_user_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./api/services/user.service */ "./src/app/api/services/user.service.ts");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -804,8 +778,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var AppComponent = /** @class */ (function () {
-    function AppComponent(loginService, userService, overlay, pusher) {
+    function AppComponent(loginService, userService, overlay, pusher, media) {
+        var _this = this;
         this.loginService = loginService;
         this.userService = userService;
         this.overlay = overlay;
@@ -813,6 +789,15 @@ var AppComponent = /** @class */ (function () {
         this.title = 'C.A ONLINE';
         this.NotificationsSize = 0;
         this.openedNotifications = false;
+        this.activeMediaQuery = '';
+        this.mqAlias = '';
+        this.watcher = media.subscribe(function (change) {
+            _this.activeMediaQuery = change ? "'" + change.mqAlias + "' = (" + change.mediaQuery + ")" : '';
+            _this.mqAlias = change.mqAlias;
+            if (change.mqAlias == 'xs') {
+                //       this.loadMobileContent();
+            }
+        });
     }
     AppComponent.prototype.addBindsOnStart = function () {
         var _this = this;
@@ -878,13 +863,25 @@ var AppComponent = /** @class */ (function () {
             sub12.unsubscribe();
         });
         this.portal = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_4__["ComponentPortal"](_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_2__["NotificationsComponent"]);
-        this.overlayRef = this.overlay.create({
-            height: '300px',
-            width: '300px',
-            hasBackdrop: true,
-            scrollStrategy: this.overlay.scrollStrategies.close(),
-            positionStrategy: this.overlay.position().connectedTo(this.nComponent, { originX: 'start', originY: 'bottom' }, { overlayX: 'start', overlayY: 'top' })
-        });
+        console.log(this.mqAlias);
+        if (this.mqAlias == 'xs') {
+            this.overlayRef = this.overlay.create({
+                height: '300px',
+                width: '300px',
+                hasBackdrop: true,
+                scrollStrategy: this.overlay.scrollStrategies.close(),
+                positionStrategy: this.overlay.position().global().centerHorizontally('6em').centerVertically()
+            });
+        }
+        else {
+            this.overlayRef = this.overlay.create({
+                height: '300px',
+                width: '300px',
+                hasBackdrop: true,
+                scrollStrategy: this.overlay.scrollStrategies.close(),
+                positionStrategy: this.overlay.position().connectedTo(this.nComponent, { originX: 'start', originY: 'bottom' }, { overlayX: 'start', overlayY: 'top' })
+            });
+        }
         this.overlayRef.backdropClick().subscribe(function () {
             _this.overlayRef.dispose();
         });
@@ -905,7 +902,8 @@ var AppComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_auth_services_login_service__WEBPACK_IMPORTED_MODULE_1__["LoginService"],
             _api_services_user_service__WEBPACK_IMPORTED_MODULE_6__["UserService"],
             _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__["Overlay"],
-            _notifications_service_pusher_service__WEBPACK_IMPORTED_MODULE_5__["PusherService"]])
+            _notifications_service_pusher_service__WEBPACK_IMPORTED_MODULE_5__["PusherService"],
+            _angular_flex_layout__WEBPACK_IMPORTED_MODULE_7__["ObservableMedia"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -1453,9 +1451,11 @@ var LoginComponent = /** @class */ (function () {
             });
         }, function (error) {
             _this.error = error;
+            console.log(_this.error);
+            _this.formSubmitError = error.error.error;
             switch (error.status) {
                 case 401:
-                    _this.loginUnauthorized();
+                    // this.loginUnauthorized();
                     break;
                 default:
                     break;
@@ -1489,7 +1489,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "mat-sidenav-container {\n    height:500px;\n}"
 
 /***/ }),
 
@@ -2101,7 +2101,7 @@ var ResetService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "mat-sidenav-container {\n    height:500px;\n}"
 
 /***/ }),
 
@@ -2112,7 +2112,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-e-header>\n  <app-e-header-title>\n      Sessão finalizada\n  </app-e-header-title>\n\n</app-e-header>\n<p>\n  A sessão terminou, para continuar navegando identifique-se novamente\n</p>\n"
+module.exports = "<app-e-header>\n  <app-e-header-title>\n      Sessão finalizada\n  </app-e-header-title>\n\n</app-e-header>\n<mat-sidenav-container class=\"example-container\">\n\n<p>\n  A sessão terminou, para continuar navegando identifique-se novamente\n</p>\n</mat-sidenav-container>"
 
 /***/ }),
 
@@ -2763,6 +2763,12 @@ var AdminCentralService = /** @class */ (function () {
     AdminCentralService.prototype.excluir_vacina = function (id) {
         return this.http.get(_api_api_module__WEBPACK_IMPORTED_MODULE_2__["API_BASE_URL"] + 'admin/' + 'excluir/vacina/' + id);
     };
+    AdminCentralService.prototype.ObterTodosPostos = function () {
+        return this.http.get(_api_api_module__WEBPACK_IMPORTED_MODULE_2__["API_BASE_URL"] + 'admin/' + 'postos');
+    };
+    AdminCentralService.prototype.ObterAplicadores = function () {
+        return this.http.get(_api_api_module__WEBPACK_IMPORTED_MODULE_2__["API_BASE_URL"] + 'admin/' + 'aplicadores');
+    };
     AdminCentralService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -2783,7 +2789,7 @@ var AdminCentralService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "table{\n\n    width:100%;\n}"
 
 /***/ }),
 
@@ -2794,7 +2800,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  view-aplicadores works!\n</p>\n"
+module.exports = "<h4>\n  \n    Aplicadores\n    </h4>\n        <mat-divider></mat-divider>\n        \n    \n    \n    \n          \n          <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"\n          matSort matSortActive=\"posto\">\n          \n          <!--- Note that these columns can be defined in any order.\n            The actual rendered columns are set as a property on the row definition\" -->\n            \n            <!-- Position Column -->\n            <ng-container matColumnDef=\"registro\">\n              <th mat-header-cell *matHeaderCellDef >Aplicador </th>\n              <td mat-cell *matCellDef=\"let element\"> {{element.registro.name}} </td>\n            </ng-container>\n            \n            <!-- Name Column -->\n            <ng-container matColumnDef=\"posto\">\n              <th mat-header-cell *matHeaderCellDef mat-sort-header > Posto  </th>\n              <td mat-cell *matCellDef=\"let element\"> {{ element.posto.endereco }}  </td>\n              <!-- <td mat-cell *matCellDef=\"let element\"> {{cidade [ element.id_cidade].Nome }} </td> -->\n            </ng-container>\n            \n\n            \n            <tr  mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n            <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n          </table>\n    "
 
 /***/ }),
 
@@ -2809,6 +2815,8 @@ module.exports = "<p>\n  view-aplicadores works!\n</p>\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewAplicadoresComponent", function() { return ViewAplicadoresComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_admin_central_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/admin-central.service */ "./src/app/dashboard/dashboard-admin/services/admin-central.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2819,18 +2827,36 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var ViewAplicadoresComponent = /** @class */ (function () {
-    function ViewAplicadoresComponent() {
+    function ViewAplicadoresComponent(adminService) {
+        this.adminService = adminService;
+        this.aplicadoresData = this.adminService.ObterAplicadores();
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"]();
+        this.displayedColumns = [
+            'registro',
+            'posto',
+        ];
     }
     ViewAplicadoresComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.aplicadoresData.pipe().subscribe(function (data) {
+            _this.dataSource.data = data;
+            _this.dataSource.sort = _this.sort;
+        });
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"]),
+        __metadata("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"])
+    ], ViewAplicadoresComponent.prototype, "sort", void 0);
     ViewAplicadoresComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-view-aplicadores',
             template: __webpack_require__(/*! ./view-aplicadores.component.html */ "./src/app/dashboard/dashboard-admin/view-aplicadores/view-aplicadores.component.html"),
             styles: [__webpack_require__(/*! ./view-aplicadores.component.css */ "./src/app/dashboard/dashboard-admin/view-aplicadores/view-aplicadores.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_admin_central_service__WEBPACK_IMPORTED_MODULE_1__["AdminCentralService"]])
     ], ViewAplicadoresComponent);
     return ViewAplicadoresComponent;
 }());
@@ -2857,7 +2883,7 @@ module.exports = "table{\n\n    width:100%;\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h4>\n  \nPostos\n</h4>\n    <mat-divider></mat-divider>\n    <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"\n    matSort matSortActive=\"created_at\">\n    \n        <!--- Note that these columns can be defined in any order.\n              The actual rendered columns are set as a property on the row definition\" -->\n      \n        <!-- Position Column -->\n        <ng-container matColumnDef=\"vacina\">\n          <th mat-header-cell *matHeaderCellDef >Vacina </th>\n          <td mat-cell *matCellDef=\"let element\"> {{element.vacina.name}} </td>\n        </ng-container>\n      \n        <!-- Name Column -->\n        <ng-container matColumnDef=\"aplicador\">\n          <th mat-header-cell *matHeaderCellDef > Aplicador  </th>\n          <td mat-cell *matCellDef=\"let element\"> {{element.aplicador.registro.name}} </td>\n        </ng-container>\n      \n        <!-- Weight Column -->\n        <ng-container matColumnDef=\"posto\">\n          <th mat-header-cell *matHeaderCellDef > Posto </th>\n          <td mat-cell *matCellDef=\"let element\"> {{element.aplicador.posto.endereco}} </td>\n        </ng-container>\n      \n        <!-- Symbol Column -->\n        <ng-container matColumnDef=\"created_at\"  >\n          <th mat-header-cell *matHeaderCellDef  mat-sort-header> Data </th>\n          <td mat-cell *matCellDef=\"let element\"> {{element.created_at | date:'dd/MM/yyyy'}} </td>\n        </ng-container>\n      \n        <tr  mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n      </table>"
+module.exports = "<h4>\n  \nPostos\n</h4>\n    <mat-divider></mat-divider>\n    \n\n\n\n      \n      <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"\n      matSort matSortActive=\"id_estado\">\n      \n      <!--- Note that these columns can be defined in any order.\n        The actual rendered columns are set as a property on the row definition\" -->\n        \n        <!-- Position Column -->\n        <ng-container matColumnDef=\"endereco\">\n          <th mat-header-cell *matHeaderCellDef >endereco </th>\n          <td mat-cell *matCellDef=\"let element\"> {{element.endereco}} </td>\n        </ng-container>\n        \n        <!-- Name Column -->\n        <ng-container matColumnDef=\"id_cidade\">\n          <th mat-header-cell *matHeaderCellDef > Cidade  </th>\n          <td mat-cell *matCellDef=\"let element\"> {{ element.id_cidade }}  </td>\n          <!-- <td mat-cell *matCellDef=\"let element\"> {{cidade [ element.id_cidade].Nome }} </td> -->\n        </ng-container>\n        \n        <!-- Symbol Column -->\n        <ng-container matColumnDef=\"id_estado\"  >\n          <th mat-header-cell *matHeaderCellDef  mat-sort-header> Estado </th>\n          <td mat-cell *matCellDef=\"let element\"> {{ element.id_estado}} </td>\n        </ng-container>\n        \n        <tr  mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n      </table>\n"
 
 /***/ }),
 
@@ -2872,6 +2898,9 @@ module.exports = "<h4>\n  \nPostos\n</h4>\n    <mat-divider></mat-divider>\n    
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewPostosComponent", function() { return ViewPostosComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_admin_central_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/admin-central.service */ "./src/app/dashboard/dashboard-admin/services/admin-central.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var src_app_Tools_city_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/Tools/city.service */ "./src/app/Tools/city.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2882,18 +2911,53 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var ViewPostosComponent = /** @class */ (function () {
-    function ViewPostosComponent() {
+    function ViewPostosComponent(adminService, cityS) {
+        this.adminService = adminService;
+        this.cityS = cityS;
+        this.postosData = this.adminService.ObterTodosPostos();
+        this.cidadesData = this.cityS.getCidades();
+        this.estadosData = this.cityS.getEstados();
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"]();
+        this.displayedColumns = [
+            'endereco',
+            'id_cidade',
+            'id_estado',
+        ];
     }
     ViewPostosComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var estados;
+        var cidades;
+        this.cidadesData.subscribe(function (x) {
+            cidades = x;
+            _this.estadosData.subscribe(function (x) {
+                estados = x;
+                _this.postosData.pipe().subscribe(function (data) {
+                    data.forEach(function (element) {
+                        element.id_estado = estados.find(function (e) { return e.ID == element.id_estado; }).Nome;
+                        element.id_cidade = cidades.find(function (e) { return e.ID == element.id_cidade; }).Nome;
+                    });
+                    _this.dataSource.data = data;
+                    _this.dataSource.sort = _this.sort;
+                });
+            });
+        });
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"]),
+        __metadata("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"])
+    ], ViewPostosComponent.prototype, "sort", void 0);
     ViewPostosComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-view-postos',
             template: __webpack_require__(/*! ./view-postos.component.html */ "./src/app/dashboard/dashboard-admin/view-postos/view-postos.component.html"),
             styles: [__webpack_require__(/*! ./view-postos.component.css */ "./src/app/dashboard/dashboard-admin/view-postos/view-postos.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_admin_central_service__WEBPACK_IMPORTED_MODULE_1__["AdminCentralService"], src_app_Tools_city_service__WEBPACK_IMPORTED_MODULE_3__["CityService"]])
     ], ViewPostosComponent);
     return ViewPostosComponent;
 }());
@@ -4199,7 +4263,7 @@ var HelpComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-e-header>\n    <app-e-header-title>\n        <div>\n            <h1>\n\n                Carteira de Vacinação Online\n            </h1>\n            <h2 style='font-size: 18px;\n                        font-weight: 300;\n                        line-height: 28px;'>\n                Saia do passado, tenha acesso a sua carterinha de vacinação a qualquer monento!\n            </h2>\n\n\n            <button mat-raised-button routerLink='/login'> Não perca mais tempo!</button>\n        </div>\n\n\n\n    </app-e-header-title>\n\n\n\n</app-e-header>\n<mat-sidenav-container class=\"example-container\">\n    <ngx-hm-carousel [(ngModel)]=\"index\" [autoplay-speed]=\"3000\" [autoplay]=\"true\" [infinite]=\"infinite\" [between-delay]=\"2000\"\n        class=\"carousel c-accent\">\n\n\n\n        <section ngx-hm-carousel-container class=\"content\">\n            <article class=\"item cursor-pointer\" [ngStyle]=\"{'background-image':'url(/imagens/home/picada.png)'}\"> \n\n\n                <div class='img'>\n\n                    <div class='titulo'>\n\n\n                        <h1>\n                            Ministério da Saúde confirma 1,5 mil casos de sarampo no país\n                        </h1>\n                    </div>\n\n                    <p>\n\n\n                        Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues, afirmou nesta segunda-feira,\n                        18, estar em estudo pela pasta uma proposta para tornar obrigatória a vacinação das crianças pelo\n                        País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o Ministério da Educação\n                        para transformar a carteira de imunização em pré-requisito da matrícula escolar. Pela regra geral,\n                        há apenas uma recomendação de que o certificado seja apresentado. “Estratégias pontuais já foram\n                        adotadas por algumas Assembleias Legislativas. Será que não é o momento de o ministério, com o MEC,\n                        tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de vacinação acompanhada?\n                        ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da República para discutir\n                        os baixos indicadores de vacinação.\n\n                    </p>\n\n\n\n                </div>\n            </article>\n            <article class=\"item cursor-pointer\" [ngStyle]=\"{'background-image':'url(/imagens/home/2.jpg)'}\">\n\n\n                <div class='img'>\n\n                    <div class='titulo'>\n\n\n                        <h1>\n                                Farmácias e drogarias são autorizadas a aplicar vacinas em SP\n                             </h1>\n                    </div>\n\n                    <p>\n\n                            São Paulo – As farmácias e drogarias vão passar a integrar a rede de locais para vacinação na cidade de São Paulo. Segundo a Secretaria Municipal da Saúde, as unidades poderão ser cadastradas no Cadastro Nacional dos Estabelecimentos de Saúde (CNES) para ter o licenciamento sanitário para realizar o serviço de imunização.\n                            A capital já conta com a lei municipal nº 16.739/2017, que regulamenta a aplicação das vacinas nesses estabelecimentos. A pasta informou que houve uma mobilização da secretaria com o Conselho Regional de Farmácia do Estado de São Paulo (CRF-SP) e da Associação Brasileira de Redes de Farmácias e Drogarias (Abrafarma) para viabilizar o cadastramento junto ao Ministério da Saúde.\n\n                    </p>\n\n\n\n                </div>\n            </article>\n\n            <article class=\"item cursor-pointer\" [ngStyle]=\"{'background-image':'url(/imagens/home/3.jpg)'}\">\n\n\n                <div class='img'>\n\n                    <div class='titulo'>\n\n\n                        <h1>\n                                Com 1,6 mil casos, Brasil luta para evitar novo surto de sarampo\n                            </h1>\n                    </div>\n\n                    <p>\n\n                            São Paulo — O governo federal enfrenta um novo desafio em relação à saúde pública dos brasileiros: a ameaça de um novo surto de sarampo no país. Nesta semana, o Ministério da Saúde divulgou que já foram confirmados 1,6 mil casos da doença viral. Outros 7 mil ainda estão em investigação, segundo o órgão. \n                            A infecção, causada por um vírus altamente contagioso, havia sido considerada erradicada no Brasil em 2016 pela Organização Mundial da Saúde (OMS). \n                            Nesta nova incidência, os estados que concentram o maior número de casos são Amazonas, com 1,3 mil pessoas infectadas, e Roraima, que registrou 301 ocorrências. Até o momento, as duas regiões foram as únicas que reportaram mortes em decorrência do sarampo, com quatro vítimas em cada estado.\n                \n                    </p>\n\n\n\n                </div>\n            </article>\n\n            <article class=\"item cursor-pointer\" [ngStyle]=\"{'background-image':'url(/imagens/home/4.jpg)'}\">\n\n\n                <div class='img'>\n\n                    <div class='titulo'>\n\n\n                        <h1>\n                                Governo estuda tornar obrigatória vacinação de crianças\n                            </h1>\n                    </div>\n\n                    <p>\n                            Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues, afirmou nesta segunda-feira, 18, estar em estudo pela pasta uma proposta para tornar obrigatória a vacinação das crianças pelo País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o Ministério da Educação para transformar a carteira de imunização em pré-requisito da matrícula escolar. Pela regra geral, há apenas uma recomendação de que o certificado seja apresentado.\n                            \n                            “Estratégias pontuais já foram adotadas por algumas Assembleias Legislativas. Será que não é o momento de o ministério, com o MEC, tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de vacinação acompanhada? ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da República para discutir os baixos indicadores de vacinação.\n                            \n                    </p>\n\n\n\n                </div>\n            </article>\n\n      \n        </section>\n\n        <ng-template #carouselPrev>\n            <div class=\"click-area\">\n                <i class=\"material-icons\">keyboard_arrow_left</i>\n            </div>\n        </ng-template>\n        <ng-template #carouselNext>\n            <div class=\"click-area\">\n                <i class=\"material-icons\">keyboard_arrow_right</i>\n            </div>\n        </ng-template>\n\n        <ng-template #carouselDot let-model>\n            <div class=\"ball bg-accent\" [class.visible]=\"model.index === model.currentIndex\"></div>\n        </ng-template>\n\n        <ng-template #carouselProgress let-progress>\n            <div class=\"progress\" *ngIf=\"progress > 0\" [style.width]=\"(direction==='right' ? progress : 100 - progress) + '%'\"></div>\n        </ng-template>\n\n    </ngx-hm-carousel>\n    <!-- \n    <div ngClass=\"home-content full-inline full-block\" [ngClass.xs]=\"{'full-inline':false, 'full-block':true}\" [ngClass.sm]=\"{'full-inline':false, 'full-block':true}\"\n        [ngClass.md]=\"{'full-inline':true, 'full-block':false}\" [ngClass.lg]=\"{'full-inline':true, 'full-block':false}\">\n        <div >\n\n\n\n            <img src='/imagens/o-medico-de-ontem-de-hoje-e-do-futuro-media.png'>\n\n            <mat-card class='card'>\n\n                <mat-card-content>\n\n\n                    <p>\n\n\n                        Perdeu a carterinha de vacinação e precisa tomar a vacina da febre amarela? A orientação da Anvisa (Agência Nacional de Vigilância\n                        Sanitária) é que a pessoa entre em contato com o local onde foi realizada a vacinação para o resgate\n                        da 2ª via. Em caso de dúvida ou impossibilidade de adquirir a carteira de vacinação, vale procurar\n                        o Programa Nacional de Imunização/ Ministério da Saúde. Esse setor é o responsável para avaliação\n                        e encaminhamento dos questionamentos das atividades de vacinação das unidades de saúde. Muita gente\n                        também não se lembra se já tomou ou não a vacina da febre amarela. Na dúvida, a recomendação é se\n                        imunizar novamente. Vale destacar que a campanha de febre amarela é preventiva e voltada aos moradores\n                        da zona norte de São Paulo. A ação começou no dia 21 de outubro, após um macaco ser encontrado morto\n                        no Horto Florestal vítima de febre amarela. Dose única para toda a vida A vacina contra a febre amarela\n                        é a melhor forma de se prevenir da doença, e uma única dose é o suficiente para se proteger por toda\n                        a vida. Mas nem todos devem tomar. O imunizante não é indicado para gestantes, mulheres amamentando\n                        crianças com até 6 meses e pessoas imunodeprimidas, como pacientes em tratamento quimioterápico,\n                        radioterápico ou com corticoides em doses elevadas (portadores de Lúpus, por exemplo). Mais de 500\n                        mil se imunizaram Na quarta-feira (1º), a meta da primeira etapa da campanha, que era de vacinar\n                        moradores da região do entorno dos parques do Horto, Cantareira e Anhanguera, foi batida. Somente\n                        na quinta-feira (2), feriado de Finados, 34.222 pessoas se vacinaram nas 37 UBSs (Unidades Básicas\n                        de Saúde), que atenderam até as 14h. Até agora, 539.949 moradores da zona norte foram vacinados,\n                        segundo a secretaria de saúde. Vale ressaltar que as ações de rotina — vacinação para pessoas que\n                        precisam viajar para áreas de risco, seguem nos demais postos da cidade. Veja a lista completa aqui\n                    </p>\n                </mat-card-content>\n\n            </mat-card>\n        </div>\n\n        <div>\n\n\n\n\n            <mat-card class='card'>\n\n                <mat-card-content>\n\n\n\n                    <p>\n\n                        Perdeu a carterinha de vacinação e precisa tomar a vacina da febre amarela? A orientação da Anvisa (Agência Nacional de Vigilância\n                        Sanitária) é que a pessoa entre em contato com o local onde foi realizada a vacinação para o resgate\n                        da 2ª via. Em caso de dúvida ou impossibilidade de adquirir a carteira de vacinação, vale procurar\n                        o Programa Nacional de Imunização/ Ministério da Saúde. Esse setor é o responsável para avaliação\n                        e encaminhamento dos questionamentos das atividades de vacinação das unidades de saúde. Muita gente\n                        também não se lembra se já tomou ou não a vacina da febre amarela. Na dúvida, a recomendação é se\n                        imunizar novamente. Vale destacar que a campanha de febre amarela é preventiva e voltada aos moradores\n                        da zona norte de São Paulo. A ação começou no dia 21 de outubro, após um macaco ser encontrado morto\n                        no Horto Florestal vítima de febre amarela. Dose única para toda a vida A vacina contra a febre amarela\n                        é a melhor forma de se prevenir da doença, e uma única dose é o suficiente para se proteger por toda\n                        a vida. Mas nem todos devem tomar. O imunizante não é indicado para gestantes, mulheres amamentando\n                        crianças com até 6 meses e pessoas imunodeprimidas, como pacientes em tratamento quimioterápico,\n                        radioterápico ou com corticoides em doses elevadas (portadores de Lúpus, por exemplo). Mais de 500\n                        mil se imunizaram Na quarta-feira (1º), a meta da primeira etapa da campanha, que era de vacinar\n                        moradores da região do entorno dos parques do Horto, Cantareira e Anhanguera, foi batida. Somente\n                        na quinta-feira (2), feriado de Finados, 34.222 pessoas se vacinaram nas 37 UBSs (Unidades Básicas\n                        de Saúde), que atenderam até as 14h. Até agora, 539.949 moradores da zona norte foram vacinados,\n                        segundo a secretaria de saúde. Vale ressaltar que as ações de rotina — vacinação para pessoas que\n                        precisam viajar para áreas de risco, seguem nos demais postos da cidade. Veja a lista completa aqui\n                    </p>\n\n                </mat-card-content>\n\n            </mat-card>\n\n            <img src='/imagens/o-medico-de-ontem-de-hoje-e-do-futuro-media.png'>\n        </div>\n    </div> -->\n\n    <mat-card class='additional-info'>\n\n\n        <mat-card-title>\n            Nunca mais perca a carteira de vacinação\n            <!-- This fils the remaining space of the current row -->\n        </mat-card-title>\n        <mat-card-subtitle>\n\n        </mat-card-subtitle>\n        <mat-card-content>\n            <div>\n                O sistema mantem seu dados em segurança, eles jamais serão perdidos ou alterados sem sua permissão\n            </div>\n\n        </mat-card-content>\n\n    </mat-card>\n\n\n\n\n</mat-sidenav-container>"
+module.exports = "<app-e-header>\n  <app-e-header-title>\n    <div>\n      <h1>\n\n        Carteira de Vacinação Online\n      </h1>\n      <h2 style='font-size: 18px;\n                        font-weight: 300;\n                        line-height: 28px;'>\n        Saia do passado, tenha acesso a sua carterinha de vacinação a qualquer monento!\n      </h2>\n\n\n      <button mat-raised-button routerLink='/login'> Não perca mais tempo!</button>\n    </div>\n\n\n\n  </app-e-header-title>\n\n\n\n</app-e-header>\n<mat-sidenav-container ngClass=\"example-container\" ngClass.xs=\"example-container-m\">\n  <ngx-hm-carousel [(ngModel)]=\"index\" [autoplay-speed]=\"3000\" [autoplay]=\"true\" [infinite]=\"infinite\" [between-delay]=\"2000\"\n    ngClass=\"carousel c-accent\" ngClass.xs='carousel-mobile'>\n\n\n\n    <section ngx-hm-carousel-container class=\"content\">\n      <article class=\"item cursor-pointer\" [ngStyle]=\"{'background-image':'url(/imagens/home/picada.png)'}\">\n\n\n        <div class='img'>\n\n          <div class='titulo'>\n\n\n            <h1>\n              Ministério da Saúde confirma 1,5 mil casos de sarampo no país\n            </h1>\n          </div>\n\n          <p>\n\n\n            Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues,\n            afirmou nesta segunda-feira,\n            18, estar em estudo pela pasta uma proposta para tornar obrigatória a vacinação das crianças pelo\n            País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o Ministério da Educação\n            para transformar a carteira de imunização em pré-requisito da matrícula escolar. Pela regra geral,\n            há apenas uma recomendação de que o certificado seja apresentado. “Estratégias pontuais já foram\n            adotadas por algumas Assembleias Legislativas. Será que não é o momento de o ministério, com o MEC,\n            tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de vacinação acompanhada?\n            ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da República para discutir\n            os baixos indicadores de vacinação.\n\n          </p>\n\n\n\n        </div>\n      </article>\n      <article class=\"item cursor-pointer\" [ngStyle]=\"{'background-image':'url(/imagens/home/2.jpg)'}\">\n\n\n        <div class='img'>\n\n          <div class='titulo'>\n\n\n            <h1>\n              Farmácias e drogarias são autorizadas a aplicar vacinas em SP\n            </h1>\n          </div>\n\n          <p>\n\n            São Paulo – As farmácias e drogarias vão passar a integrar a rede de locais para vacinação na cidade de São\n            Paulo. Segundo a Secretaria Municipal da Saúde, as unidades poderão ser cadastradas no Cadastro Nacional\n            dos Estabelecimentos de Saúde (CNES) para ter o licenciamento sanitário para realizar o serviço de\n            imunização.\n            A capital já conta com a lei municipal nº 16.739/2017, que regulamenta a aplicação das vacinas nesses\n            estabelecimentos. A pasta informou que houve uma mobilização da secretaria com o Conselho Regional de\n            Farmácia do Estado de São Paulo (CRF-SP) e da Associação Brasileira de Redes de Farmácias e Drogarias\n            (Abrafarma) para viabilizar o cadastramento junto ao Ministério da Saúde.\n\n          </p>\n\n\n\n        </div>\n      </article>\n\n      <article class=\"item cursor-pointer\" [ngStyle]=\"{'background-image':'url(/imagens/home/3.jpg)'}\">\n\n\n        <div class='img'>\n\n          <div class='titulo'>\n\n\n            <h1>\n              Com 1,6 mil casos, Brasil luta para evitar novo surto de sarampo\n            </h1>\n          </div>\n\n          <p>\n\n            São Paulo — O governo federal enfrenta um novo desafio em relação à saúde pública dos brasileiros: a ameaça\n            de um novo surto de sarampo no país. Nesta semana, o Ministério da Saúde divulgou que já foram confirmados\n            1,6 mil casos da doença viral. Outros 7 mil ainda estão em investigação, segundo o órgão. \n            A infecção, causada por um vírus altamente contagioso, havia sido considerada erradicada no Brasil em 2016\n            pela Organização Mundial da Saúde (OMS). \n            Nesta nova incidência, os estados que concentram o maior número de casos são Amazonas, com 1,3 mil pessoas\n            infectadas, e Roraima, que registrou 301 ocorrências. Até o momento, as duas regiões foram as únicas que\n            reportaram mortes em decorrência do sarampo, com quatro vítimas em cada estado.\n\n          </p>\n\n\n\n        </div>\n      </article>\n\n      <article class=\"item cursor-pointer\" [ngStyle]=\"{'background-image':'url(/imagens/home/4.jpg)'}\">\n\n\n        <div class='img'>\n\n          <div class='titulo'>\n\n\n            <h1>\n              Governo estuda tornar obrigatória vacinação de crianças\n            </h1>\n          </div>\n\n          <p>\n            Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues,\n            afirmou nesta segunda-feira, 18, estar em estudo pela pasta uma proposta para tornar obrigatória\n            a vacinação das crianças pelo País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o\n            Ministério da Educação para transformar a carteira de imunização em pré-requisito da matrícula escolar.\n            Pela regra geral, há apenas uma recomendação de que o certificado seja apresentado.\n\n            “Estratégias pontuais já foram adotadas por algumas Assembleias Legislativas. Será que não é o momento de o\n            ministério, com o MEC, tornar obrigatório que toda criança e adolescente na escola tenha sua carteira de\n            vacinação acompanhada? ”, indagou, durante evento organizado nesta segunda pela Procuradoria-Geral da\n            República para discutir os baixos indicadores de vacinação.\n\n          </p>\n\n\n\n        </div>\n      </article>\n\n\n    </section>\n\n    <ng-template #carouselPrev>\n      <div class=\"click-area\">\n        <i class=\"material-icons\">keyboard_arrow_left</i>\n      </div>\n    </ng-template>\n    <ng-template #carouselNext>\n      <div class=\"click-area\">\n        <i class=\"material-icons\">keyboard_arrow_right</i>\n      </div>\n    </ng-template>\n\n    <ng-template #carouselDot let-model>\n      <div class=\"ball bg-accent\" [class.visible]=\"model.index === model.currentIndex\"></div>\n    </ng-template>\n\n    <ng-template #carouselProgress let-progress>\n      <div class=\"progress\" *ngIf=\"progress > 0\" [style.width]=\"(direction==='right' ? progress : 100 - progress) + '%'\"></div>\n    </ng-template>\n\n  </ngx-hm-carousel>\n  <!-- \n    <div ngClass=\"home-content full-inline full-block\" [ngClass.xs]=\"{'full-inline':false, 'full-block':true}\" [ngClass.sm]=\"{'full-inline':false, 'full-block':true}\"\n        [ngClass.md]=\"{'full-inline':true, 'full-block':false}\" [ngClass.lg]=\"{'full-inline':true, 'full-block':false}\">\n        <div >\n\n\n\n            <img src='/imagens/o-medico-de-ontem-de-hoje-e-do-futuro-media.png'>\n\n            <mat-card class='card'>\n\n                <mat-card-content>\n\n\n                    <p>\n\n\n                        Perdeu a carterinha de vacinação e precisa tomar a vacina da febre amarela? A orientação da Anvisa (Agência Nacional de Vigilância\n                        Sanitária) é que a pessoa entre em contato com o local onde foi realizada a vacinação para o resgate\n                        da 2ª via. Em caso de dúvida ou impossibilidade de adquirir a carteira de vacinação, vale procurar\n                        o Programa Nacional de Imunização/ Ministério da Saúde. Esse setor é o responsável para avaliação\n                        e encaminhamento dos questionamentos das atividades de vacinação das unidades de saúde. Muita gente\n                        também não se lembra se já tomou ou não a vacina da febre amarela. Na dúvida, a recomendação é se\n                        imunizar novamente. Vale destacar que a campanha de febre amarela é preventiva e voltada aos moradores\n                        da zona norte de São Paulo. A ação começou no dia 21 de outubro, após um macaco ser encontrado morto\n                        no Horto Florestal vítima de febre amarela. Dose única para toda a vida A vacina contra a febre amarela\n                        é a melhor forma de se prevenir da doença, e uma única dose é o suficiente para se proteger por toda\n                        a vida. Mas nem todos devem tomar. O imunizante não é indicado para gestantes, mulheres amamentando\n                        crianças com até 6 meses e pessoas imunodeprimidas, como pacientes em tratamento quimioterápico,\n                        radioterápico ou com corticoides em doses elevadas (portadores de Lúpus, por exemplo). Mais de 500\n                        mil se imunizaram Na quarta-feira (1º), a meta da primeira etapa da campanha, que era de vacinar\n                        moradores da região do entorno dos parques do Horto, Cantareira e Anhanguera, foi batida. Somente\n                        na quinta-feira (2), feriado de Finados, 34.222 pessoas se vacinaram nas 37 UBSs (Unidades Básicas\n                        de Saúde), que atenderam até as 14h. Até agora, 539.949 moradores da zona norte foram vacinados,\n                        segundo a secretaria de saúde. Vale ressaltar que as ações de rotina — vacinação para pessoas que\n                        precisam viajar para áreas de risco, seguem nos demais postos da cidade. Veja a lista completa aqui\n                    </p>\n                </mat-card-content>\n\n            </mat-card>\n        </div>\n\n        <div>\n\n\n\n\n            <mat-card class='card'>\n\n                <mat-card-content>\n\n\n\n                    <p>\n\n                        Perdeu a carterinha de vacinação e precisa tomar a vacina da febre amarela? A orientação da Anvisa (Agência Nacional de Vigilância\n                        Sanitária) é que a pessoa entre em contato com o local onde foi realizada a vacinação para o resgate\n                        da 2ª via. Em caso de dúvida ou impossibilidade de adquirir a carteira de vacinação, vale procurar\n                        o Programa Nacional de Imunização/ Ministério da Saúde. Esse setor é o responsável para avaliação\n                        e encaminhamento dos questionamentos das atividades de vacinação das unidades de saúde. Muita gente\n                        também não se lembra se já tomou ou não a vacina da febre amarela. Na dúvida, a recomendação é se\n                        imunizar novamente. Vale destacar que a campanha de febre amarela é preventiva e voltada aos moradores\n                        da zona norte de São Paulo. A ação começou no dia 21 de outubro, após um macaco ser encontrado morto\n                        no Horto Florestal vítima de febre amarela. Dose única para toda a vida A vacina contra a febre amarela\n                        é a melhor forma de se prevenir da doença, e uma única dose é o suficiente para se proteger por toda\n                        a vida. Mas nem todos devem tomar. O imunizante não é indicado para gestantes, mulheres amamentando\n                        crianças com até 6 meses e pessoas imunodeprimidas, como pacientes em tratamento quimioterápico,\n                        radioterápico ou com corticoides em doses elevadas (portadores de Lúpus, por exemplo). Mais de 500\n                        mil se imunizaram Na quarta-feira (1º), a meta da primeira etapa da campanha, que era de vacinar\n                        moradores da região do entorno dos parques do Horto, Cantareira e Anhanguera, foi batida. Somente\n                        na quinta-feira (2), feriado de Finados, 34.222 pessoas se vacinaram nas 37 UBSs (Unidades Básicas\n                        de Saúde), que atenderam até as 14h. Até agora, 539.949 moradores da zona norte foram vacinados,\n                        segundo a secretaria de saúde. Vale ressaltar que as ações de rotina — vacinação para pessoas que\n                        precisam viajar para áreas de risco, seguem nos demais postos da cidade. Veja a lista completa aqui\n                    </p>\n\n                </mat-card-content>\n\n            </mat-card>\n\n            <img src='/imagens/o-medico-de-ontem-de-hoje-e-do-futuro-media.png'>\n        </div>\n    </div> -->\n\n  <mat-card class='additional-info'>\n\n\n    <mat-card-title>\n      Nunca mais perca a carteira de vacinação\n      <!-- This fils the remaining space of the current row -->\n    </mat-card-title>\n    <mat-card-subtitle>\n\n    </mat-card-subtitle>\n    <mat-card-content>\n      <div>\n        O sistema mantem seu dados em segurança, eles jamais serão perdidos ou alterados sem sua permissão\n      </div>\n\n    </mat-card-content>\n\n  </mat-card>\n\n\n  <div ngClass='example-container' fxLayout=\"column\">\n    <div ngFlex fxLayoutAlign=\"space-between center\" fxLayout=\"row\">\n      <div ngFlex='100'>\n        <img width=\"50%\" height='30%' src='/imagens/home/pic01.jpeg'>\n      </div>\n      <div ngFlex>\n        <mat-card>\n\n          Acesse a qualquer momento sua carterinha de vacinação em apenas poucos segundos\n        </mat-card>\n      </div>\n    </div>\n\n    <div ngFlex fxLayoutAlign=\"center center\" fxLayout=\"row\">\n        <div  >\n          <mat-card>\n  \n            Tudo fica salvo com segurança em nosso banco de dados!\n          </mat-card>\n        </div>\n      <div ngFlex >\n        <img style='    margin-left: 50%;'        width=\"50%\"  height='30%' src='/imagens/home/pic02.jpeg'>\n      </div>\n    </div>\n\n\n  </div>\n\n\n\n</mat-sidenav-container>\n"
 
 /***/ }),
 
@@ -4210,7 +4274,7 @@ module.exports = "<app-e-header>\n    <app-e-header-title>\n        <div>\n     
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "img {\n  width: 100%;\n  -webkit-filter: blur(3px);\n          filter: blur(3px); }\n\n.default-margin-home, .home-content, .additional-info {\n  margin: 1em;\n  padding: 2em; }\n\n.full-block {\n  display: block; }\n\n.full-inline {\n  display: inline-flex; }\n\n.card {\n  width: 50% !important; }\n\n.home-content > {\n  margin: 100px !important; }\n\n:host ::ng-deep .e-header {\n  margin: 0 !important; }\n\n:host ::ng-deep .e-header div {\n    text-align: center;\n    font-weight: 300;\n    padding: 50px; }\n\n:host ::ng-deep .e-header h1 {\n    line-height: 56px !important;\n    font-size: 56px !important;\n    font: 400 24px/32px Roboto,\"Helvetica Neue\",sans-serif; }\n\n.example-container {\n  margin: 4em;\n  flex: 1 !important; }\n\n.carousel {\n  width: 100%;\n  height: 600px; }\n\n@media only screen and (max-width: 700px) {\n    .carousel {\n      height: 400px; } }\n\n.carousel article {\n    background-size: contain; }\n\n.carousel .titulo {\n    z-index: 401;\n    text-shadow: 1px 1px black;\n    color: white;\n    text-align: center;\n    width: 100%;\n    font-size: 35px; }\n\n@media only screen and (max-width: 699px) {\n      .carousel .titulo {\n        font-size: 10px; } }\n\n.carousel p {\n    color: white;\n    font-stretch: wider;\n    padding: 2em;\n    margin: 1em 1em 1em 1em;\n    background-color: rgba(0, 0, 0, 0.493);\n    z-index: 262;\n    bottom: 63%; }\n\n@media only screen and (max-width: 700px) {\n      .carousel p {\n        font-size: smaller; } }\n\n.carousel .content {\n    display: flex; }\n\n.carousel .content .item {\n      width: 100%;\n      display: block; }\n\n.carousel .item {\n    width: 100%;\n    display: block; }\n\n.carousel .item .img {\n      width: 100%;\n      display: block;\n      background-size: cover;\n      background-position: center;\n      height: 0;\n      padding-bottom: 100%; }\n\n.carousel .ball {\n    width: 10px;\n    height: 10px;\n    border-radius: app-border-radius(cycle);\n    background: black;\n    border: 2px solid;\n    opacity: 0.5; }\n\n.carousel .ball.visible {\n      opacity: 1; }\n\n.carousel.transition {\n    transition: all .4s ease-in-out; }\n\n.carousel .progress {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 5px;\n    background: #00d1b2; }\n\n.carousel .click-area {\n    width: 50px;\n    text-align: center; }\n\n.carousel .click-area i {\n      font-size: 3em; }\n"
+module.exports = ".default-margin-home, .home-content, .additional-info {\n  margin: 1em;\n  padding: 2em; }\n\n.full-block {\n  display: block; }\n\n.full-inline {\n  display: inline-flex; }\n\n.card {\n  width: 50% !important; }\n\n.home-content > {\n  margin: 100px !important; }\n\n:host ::ng-deep .e-header {\n  margin: 0 !important; }\n\n:host ::ng-deep .e-header div {\n    text-align: center;\n    font-weight: 300;\n    padding: 50px; }\n\n:host ::ng-deep .e-header h1 {\n    line-height: 56px !important;\n    font-size: 56px !important;\n    font: 400 24px/32px Roboto,\"Helvetica Neue\",sans-serif; }\n\n.example-container {\n  margin: 4em;\n  flex: 1 !important; }\n\n.example-container-m {\n  flex: 1 !important; }\n\n.carousel {\n  width: 100%;\n  height: 600px; }\n\n@media only screen and (max-width: 700px) {\n    .carousel {\n      height: 400px; } }\n\n.carousel article {\n    background-size: contain; }\n\n.carousel .titulo {\n    z-index: 721;\n    text-shadow: 1px 1px black;\n    color: white;\n    text-align: center;\n    width: 100%;\n    font-size: 35px; }\n\n@media only screen and (max-width: 699px) {\n      .carousel .titulo {\n        font-size: 10px; } }\n\n.carousel p {\n    color: white;\n    font-stretch: wider;\n    padding: 2em;\n    margin: 1em 1em 1em 1em;\n    background-color: rgba(0, 0, 0, 0.493);\n    z-index: 719;\n    bottom: 63%; }\n\n@media only screen and (max-width: 700px) {\n      .carousel p {\n        font-size: smaller; } }\n\n.carousel .content {\n    display: flex; }\n\n.carousel .content .item {\n      width: 100%;\n      display: block; }\n\n.carousel .item {\n    width: 100%;\n    display: block; }\n\n.carousel .item .img {\n      width: 100%;\n      display: block;\n      background-size: cover;\n      background-position: center;\n      height: 0;\n      padding-bottom: 100%; }\n\n.carousel .ball {\n    width: 10px;\n    height: 10px;\n    border-radius: app-border-radius(cycle);\n    background: black;\n    border: 2px solid;\n    opacity: 0.5; }\n\n.carousel .ball.visible {\n      opacity: 1; }\n\n.carousel.transition {\n    transition: all .4s ease-in-out; }\n\n.carousel .progress {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 5px;\n    background: #00d1b2; }\n\n.carousel .click-area {\n    width: 50px;\n    text-align: center; }\n\n.carousel .click-area i {\n      font-size: 3em; }\n\n.carousel-mobile article {\n  background-size: contain;\n  background-position: center; }\n\n.carousel-mobile .titulo {\n  z-index: 982;\n  text-shadow: 1px 1px black;\n  color: white;\n  text-align: center;\n  width: 100%;\n  font-size: 35px; }\n\n@media only screen and (max-width: 699px) {\n    .carousel-mobile .titulo {\n      font-size: 10px; } }\n\n.carousel-mobile p {\n  color: white;\n  font-stretch: wider;\n  padding: 2em;\n  margin: 1em 1em 1em 1em;\n  background-color: rgba(0, 0, 0, 0.493);\n  z-index: 529;\n  bottom: 63%;\n  font-size: x-small; }\n\n.carousel-mobile .content {\n  display: flex; }\n\n.carousel-mobile .content .item {\n    width: 100%;\n    display: block; }\n\n.carousel-mobile .item {\n  width: 100%;\n  display: block; }\n\n.carousel-mobile .item .img {\n    width: 100%;\n    display: block;\n    background-size: cover;\n    background-position: center;\n    height: 0;\n    padding-bottom: 80%; }\n\n.carousel-mobile .ball {\n  width: 10px;\n  height: 10px;\n  border-radius: app-border-radius(cycle);\n  background: black;\n  border: 2px solid;\n  opacity: 0.5; }\n\n.carousel-mobile .ball.visible {\n    opacity: 1; }\n\n.carousel-mobile.transition {\n  transition: all .4s ease-in-out; }\n\n.carousel-mobile .progress {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 5px;\n  background: #00d1b2; }\n\n.carousel-mobile .click-area {\n  width: 50px;\n  text-align: center; }\n\n.carousel-mobile .click-area i {\n    font-size: 3em; }\n"
 
 /***/ }),
 
@@ -4380,7 +4444,7 @@ var MaterialModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".notifications{\n    font-size:50%;\n    background-color:white;\n    max-height: 400px;\n    overflow-y: scroll;\n    margin-left: -120px;\n}\n.notification_highlight{\n    background-color:rgba(136, 182, 250, 0.514);\n\n}\n.disable-scroll{\n    overflow-y: hidden;\n    overflow-x: hidden;\n\n}\n.notifications p{\n    font-size: 80%;\n}\n.notification_item{\n    display: flex;\n    /* margin: 6px; */\n    margin-left:0;\n    padding: 0;\n}\n.notification_title mat-button-toggle-group{\n    box-shadow: 0 0 0;\n}\n.divider{\n    height:initial;\n    width: 1px;\n    margin-left: 5px;\n    margin-right: 5px;\n    \n    border-left: 1px solid #00000033;\n}\n.notification_author{\n    min-width: 96px;\n}\n.notification-content{\n    /* word-break: break-all; */\n}\n.notification_title,\n.notification-data{\n    min-width: 300px;\n    margin:0;\n\n}\n.notification_date{\n    font-size: 10px;\n}\nul li{\n    border-bottom: 1px solid rgb(212, 212, 212);\n}\nul{\n    list-style: none;\n    font-size:16px;\n    margin: 10px;\n    padding:0;\n    font-family: Roboto, \"Helvetica Neue\", sans-serif;\n}"
+module.exports = ".notifications{\n    font-size:50%;\n    background-color:white;\n    max-height: 400px;\n    overflow-y: scroll;\n    /* margin-left: -120px; */\n}\n.notification_highlight{\n    background-color:rgba(136, 182, 250, 0.514);\n\n}\n.disable-scroll{\n    overflow-y: hidden;\n    overflow-x: hidden;\n\n}\n.notifications p{\n    font-size: 80%;\n}\n.notification_item{\n    display: flex;\n    /* margin: 6px; */\n    margin-left:0;\n    padding: 0;\n}\n.notification_title mat-button-toggle-group{\n    box-shadow: 0 0 0;\n}\n.divider{\n    height:initial;\n    width: 1px;\n    margin-left: 5px;\n    margin-right: 5px;\n    \n    border-left: 1px solid #00000033;\n}\n.notification_author{\n    min-width: 96px;\n}\n.notification-content{\n    /* word-break: break-all; */\n}\n.notification_title,\n.notification-data{\n    min-width: 300px;\n    margin:0;\n\n}\n.notification_date{\n    font-size: 10px;\n}\nul li{\n    border-bottom: 1px solid rgb(212, 212, 212);\n}\nul{\n    list-style: none;\n    font-size:16px;\n    margin: 10px;\n    padding:0;\n    font-family: Roboto, \"Helvetica Neue\", sans-serif;\n}"
 
 /***/ }),
 

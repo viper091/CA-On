@@ -13,6 +13,17 @@ use VacinaOnline\Notifications\CustomLetter;
 class AdminController extends Controller
 {
     //
+
+    public function postos(){
+        return response()->json(Posto::all());
+    }
+
+    public function aplicadores(){
+        return response()->json(
+            Aplicador::with('registro:id,name','posto:id,endereco')->get()
+
+        );
+    }
     public function excluir_vacina($id){
         $vacina = Vacina::find($id);
         if($vacina){
