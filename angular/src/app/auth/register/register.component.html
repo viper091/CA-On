@@ -25,7 +25,7 @@
                     <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
            
                     <mat-error *ngIf="name.hasError('required')">
-                        Email is <strong>required</strong>
+                        Por-favor digite um nome
                     </mat-error>
 
                 </mat-form-field>
@@ -34,10 +34,10 @@
                     <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher">
                     <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
                     <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
-                        Please enter a valid email address
+                        Por-favor digite um email valido
                     </mat-error>
                     <mat-error *ngIf="email.hasError('required')">
-                        Email is <strong>required</strong>
+                        O Email é <strong>obrigatorio</strong>
                     </mat-error>
 
                 </mat-form-field>
@@ -51,7 +51,7 @@
                         <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
 
                         <mat-error *ngIf="password.hasError('required')">
-                            Password is <strong>required</strong>
+                            A Senha é <strong>obrigatoria</strong>
                         </mat-error>
                     </mat-form-field>
                     <mat-form-field class="login-full-width">
@@ -61,10 +61,10 @@
                         <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
 
                         <mat-error *ngIf="confirmPassword.hasError('required')">
-                            Password is <strong>required</strong>
+                            A Senha é <strong>obrigatoria</strong>
                         </mat-error>
                         <mat-error *ngIf="confirmPassword.hasError('MatchPassword')">
-                            Password doesnt <strong>match</strong>
+                            As senhas não são <strong>iguais</strong>
                         </mat-error>
                     </mat-form-field>
                 </div>
