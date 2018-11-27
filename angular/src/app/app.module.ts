@@ -8,7 +8,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component'
 
 import { MaterialModule } from './material/material.module'
-import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+// import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 import { HomeComponent } from './home/home.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -38,8 +38,8 @@ import { PostoComponent } from './dashboard/dashboard-applicator/posto/posto.com
 import { HelpComponent } from './help/help.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
-import 'hammerjs';
-import { NgxHmCarouselModule } from 'ngx-hm-carousel';
+ import 'hammerjs';
+ import { NgxHmCarouselModule } from 'ngx-hm-carousel';
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -113,13 +113,12 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     BrowserAnimationsModule,
     MainRoutesModule,
     MaterialModule,
-    LoadingBarRouterModule,
+    // LoadingBarRouterModule,
     FlexLayoutModule,
+    NgxHmCarouselModule,
     FormsModule,
     ReactiveFormsModule,
-  
     InterceptorModule,
-    NgxHmCarouselModule,
     TruncateModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxUiLoaderHttpModule, // import NgxUiLoaderHttpModule. By default, it will show background loader.

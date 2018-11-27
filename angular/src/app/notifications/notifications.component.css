@@ -3,10 +3,11 @@
     background-color:white;
     max-height: 400px;
     overflow-y: scroll;
+    margin: 10px;
     /* margin-left: -120px; */
 }
 .notification_highlight{
-    background-color:rgba(136, 182, 250, 0.514);
+    background-color:rgba(136, 182, 250, 0.26);
 
 }
 
@@ -19,6 +20,7 @@
 .notifications p{
     font-size: 80%;
 }
+
 
 .notification_item{
     display: flex;

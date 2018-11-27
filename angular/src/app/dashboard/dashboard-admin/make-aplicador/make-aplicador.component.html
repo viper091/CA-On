@@ -24,10 +24,10 @@
       Email  não existe<strong></strong>
     </mat-error>
     <mat-error *ngIf="app_email.hasError('email') && !app_email.hasError('required')">
-      Please enter a valid email address
+      Email invalido
     </mat-error>
     <mat-error *ngIf="app_email.hasError('required')">
-      Email is <strong>required</strong>
+      Email e <strong>obrigatorio</strong>
     </mat-error>
 
     

@@ -62,7 +62,8 @@ class UserController extends Controller
   */
         $vacinas =Vacina::with(["historico"=> function($q) use(  $user) {
             $q->where("id_registro","=",$user->id);
-        }])->get();
+        
+        }])->withTrashed()->get();
         
         return response()->json($vacinas);
     }

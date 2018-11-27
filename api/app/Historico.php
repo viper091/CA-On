@@ -14,7 +14,7 @@ class Historico extends Model
     //
     function vacina(){
         
-        return $this->hasOne('VacinaOnline\Vacina','id','id_vacina');
+        return $this->hasOne('VacinaOnline\Vacina','id','id_vacina')->withTrashed();
         
     }
 

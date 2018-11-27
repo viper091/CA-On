@@ -9,7 +9,7 @@ import { DomSanitizer } from '../../../node_modules/@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
   columnNum = 2;
-
+  
   constructor(media: ObservableMedia, public sanitizer: DomSanitizer) {
     media.asObservable()
       .subscribe((change: MediaChange) => {

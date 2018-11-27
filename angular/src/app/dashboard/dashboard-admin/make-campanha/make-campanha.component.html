@@ -13,7 +13,7 @@
   </div>
   <div *ngIf='done?.length' style='color:green'>
 
-    Posto adicionado com sucesso
+    Campanha realizada com sucesso
   </div>
 
 
@@ -22,21 +22,22 @@
     <!-- <mat-hint></mat-hint> -->
 
     <mat-error *ngIf="titulo.hasError('required')">
-      Email is
-      <strong>required</strong>
+      Email e
+      <strong>obrigatorio</strong>
     </mat-error>
 
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <textarea matInput placeholder="conteudo" formControlName="conteudo" [errorStateMatcher]="matcher"></textarea>
-      <!-- <mat-hint></mat-hint> -->
-  
-      <mat-error *ngIf="conteudo.hasError('required')">
-        Email is <strong>required</strong>
-      </mat-error>
-  
-    </mat-form-field>
+    <!-- <mat-hint></mat-hint> -->
+
+    <mat-error *ngIf="conteudo.hasError('required')">
+      Conteudo e
+      <strong>obrigatorio</strong>
+    </mat-error>
+
+  </mat-form-field>
   <div class='appInput'>
     <mat-hint>
 
@@ -50,10 +51,10 @@
 
       </mat-select>
     </mat-form-field>
-  
-  </div>
- <div>
 
-  <button [disabled]="campanhaForm.invalid" type='submit' mat-raised-button color="primary">Criar</button>
-</div>
-    </form>
+  </div>
+  <div>
+
+    <button [disabled]="campanhaForm.invalid" type='submit' mat-raised-button color="primary">Criar</button>
+  </div>
+</form>

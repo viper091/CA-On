@@ -1,7 +1,7 @@
 import { Component, ViewChild, Renderer2, ViewContainerRef, ElementRef, InjectionToken, Injector, ComponentRef } from '@angular/core';
 import { LoginService } from './auth/services/login.service';
 import { NotificationsComponent } from './notifications/notifications.component';
-import { OverlayModule, Overlay, CdkOverlayOrigin, OverlayRef } from '@angular/cdk/overlay';
+import { OverlayModule, Overlay, CdkOverlayOrigin, OverlayRef, ConnectedPositionStrategy, ConnectionPositionPair } from '@angular/cdk/overlay';
 import { ComponentPortal, PortalInjector } from '@angular/cdk/portal';
 import { map, take, skip, skipUntil, filter } from 'rxjs/operators';
 import { PusherService } from './notifications/service/pusher.service';
@@ -29,6 +29,8 @@ export class AppComponent {
   watcher: Subscription;
   activeMediaQuery = '';
   mqAlias = '';
+
+  
   constructor(public loginService: LoginService,
     private userService: UserService,
     private overlay: Overlay,
@@ -130,23 +132,38 @@ export class AppComponent {
     this.portal = new ComponentPortal(NotificationsComponent);
     console.log(this.mqAlias)
     if (this.mqAlias == 'xs') {
+      const positions = [
+        new ConnectionPositionPair({ originX: 'start', originY: 'center' }, { overlayX: 'start', overlayY: 'top' }),
+        new ConnectionPositionPair({ originX: 'end', originY: 'top' }, { overlayX: 'start', overlayY: 'bottom' })
+      ];
       this.overlayRef = this.overlay.create(
         {
           height: '300px',
-          width: '300px',
+          width: '200px',
           hasBackdrop: true,
           scrollStrategy: this.overlay.scrollStrategies.close(),
-          positionStrategy: this.overlay.position().global().centerHorizontally('6em').centerVertically()
-        });
+          positionStrategy: this.overlay.position().flexibleConnectedTo(this.nComponent).withPositions(
+            positions
+          ).withLockedPosition(true)
+
+        }
+
+      );
     }
     else {
+      const positions = [
+        new ConnectionPositionPair({ originX: 'start', originY: 'center' }, { overlayX: 'start', overlayY: 'center' }),
+        new ConnectionPositionPair({ originX: 'end', originY: 'top' }, { overlayX: 'start', overlayY: 'bottom' })
+      ];
       this.overlayRef = this.overlay.create(
         {
           height: '300px',
-          width: '300px',
+          width: '200px',
           hasBackdrop: true,
           scrollStrategy: this.overlay.scrollStrategies.close(),
-          positionStrategy: this.overlay.position().connectedTo(this.nComponent, { originX: 'start', originY: 'bottom' }, { overlayX: 'start', overlayY: 'top' })
+          positionStrategy: this.overlay.position().flexibleConnectedTo(this.nComponent).withPositions(
+            positions
+          ).withDefaultOffsetX(-103).withDefaultOffsetY(20).withLockedPosition(true)
 
         }
 

@@ -19,6 +19,14 @@ export class MinhaCarterinhaComponent implements OnInit {
 
       data => {
         this.dataC = data;
+
+        this.dataC.forEach(element => {
+          element.exibir = true;
+          if(element.deleted_at ){
+            element.exibir = element.historico.length > 0 ? true : false;
+          }
+        });
+        
         // this.keys=  Object.keys(this.dataC);
         console.log(data);
       }

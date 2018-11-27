@@ -95,7 +95,7 @@ class AdminController extends Controller
         $ret = Notification::send($users, new CustomLetter($request->titulo,
                                                     $request->conteudo));
 
-        return response()->json($ret);
+        return response()->json(1);
 
         // recurso novo 
     }

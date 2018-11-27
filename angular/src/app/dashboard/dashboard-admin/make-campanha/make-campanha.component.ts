@@ -47,13 +47,13 @@ export class MakeCampanhaComponent implements OnInit {
   onSubmit() {
     let postoParams = this.campanhaForm.value;
     console.log(postoParams);
-    this.done = null;
-    this.errors = null;
+   // this.done = null;
+    //this.errors = null;
 
     this.adminService.lancar_campanha (postoParams).subscribe(
       res => { 
         this.done=Object.values( res);
-
+        alert('ok');
       },
       errors => {
         console.log(errors.error);

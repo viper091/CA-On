@@ -36,3 +36,4 @@ matSort matSortActive="created_at">
     <tr  mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  <p class='without' *ngIf='dataSource.data.length'>Nenhum dado encontrado</p>

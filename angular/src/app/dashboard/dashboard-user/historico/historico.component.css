@@ -2,3 +2,8 @@ table{
 
     width:100%;
 }
+
+.without{
+    width: 50%;
+    margin: auto;
+}

@@ -1,3 +1,4 @@
+
 <app-e-header>
   <app-e-header-title>
     <div>
@@ -29,7 +30,10 @@
 
 
     <section ngx-hm-carousel-container class="content">
-      <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/picada.png)'}">
+      <article 
+      ngx-hm-carousel-item
+      class="item cursor-pointer" 
+      [ngStyle]="{'background-image':'url(/imagens/home/picada.png)'}">
 
 
         <div class='img'>
@@ -62,7 +66,7 @@
 
         </div>
       </article>
-      <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/2.jpg)'}">
+      <article       ngx-hm-carousel-item class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/2.jpg)'}">
 
 
         <div class='img'>
@@ -93,7 +97,7 @@
         </div>
       </article>
 
-      <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/3.jpg)'}">
+      <article       ngx-hm-carousel-item class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/3.jpg)'}">
 
 
         <div class='img'>
@@ -108,11 +112,11 @@
 
           <p>
 
-            São Paulo — O governo federal enfrenta um novo desafio em relação à saúde pública dos brasileiros: a ameaça
-            de um novo surto de sarampo no país. Nesta semana, o Ministério da Saúde divulgou que já foram confirmados
-            1,6 mil casos da doença viral. Outros 7 mil ainda estão em investigação, segundo o órgão. 
-            A infecção, causada por um vírus altamente contagioso, havia sido considerada erradicada no Brasil em 2016
-            pela Organização Mundial da Saúde (OMS). 
+            São Paulo — O governo federal enfrenta um novo desafio em relação à saúde pública dos brasileiros: a ameaça
+            de um novo surto de sarampo no país. Nesta semana, o Ministério da Saúde divulgou que já foram confirmados
+            1,6 mil casos da doença viral. Outros 7 mil ainda estão em investigação, segundo o órgão. 
+            A infecção, causada por um vírus altamente contagioso, havia sido considerada erradicada no Brasil em 2016
+            pela Organização Mundial da Saúde (OMS). 
             Nesta nova incidência, os estados que concentram o maior número de casos são Amazonas, com 1,3 mil pessoas
             infectadas, e Roraima, que registrou 301 ocorrências. Até o momento, as duas regiões foram as únicas que
             reportaram mortes em decorrência do sarampo, com quatro vítimas em cada estado.
@@ -124,7 +128,7 @@
         </div>
       </article>
 
-      <article class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/4.jpg)'}">
+      <article       ngx-hm-carousel-item class="item cursor-pointer" [ngStyle]="{'background-image':'url(/imagens/home/4.jpg)'}">
 
 
         <div class='img'>
@@ -140,7 +144,7 @@
           <p>
             Brasília – A coordenadora do Programa Nacional de Imunizações do Ministério da Saúde, Carla Domingues,
             afirmou nesta segunda-feira, 18, estar em estudo pela pasta uma proposta para tornar obrigatória
-            a vacinação das crianças pelo País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o
+            a vacinação das crianças pelo País. Entre os mecanismos avaliados está o de editar uma norma conjunta com o
             Ministério da Educação para transformar a carteira de imunização em pré-requisito da matrícula escolar.
             Pela regra geral, há apenas uma recomendação de que o certificado seja apresentado.
 
@@ -183,19 +187,10 @@
     <div ngClass="home-content full-inline full-block" [ngClass.xs]="{'full-inline':false, 'full-block':true}" [ngClass.sm]="{'full-inline':false, 'full-block':true}"
         [ngClass.md]="{'full-inline':true, 'full-block':false}" [ngClass.lg]="{'full-inline':true, 'full-block':false}">
         <div >
-
-
-
             <img src='/imagens/o-medico-de-ontem-de-hoje-e-do-futuro-media.png'>
-
             <mat-card class='card'>
-
                 <mat-card-content>
-
-
                     <p>
-
-
                         Perdeu a carterinha de vacinação e precisa tomar a vacina da febre amarela? A orientação da Anvisa (Agência Nacional de Vigilância
                         Sanitária) é que a pessoa entre em contato com o local onde foi realizada a vacinação para o resgate
                         da 2ª via. Em caso de dúvida ou impossibilidade de adquirir a carteira de vacinação, vale procurar
@@ -217,23 +212,12 @@
                         precisam viajar para áreas de risco, seguem nos demais postos da cidade. Veja a lista completa aqui
                     </p>
                 </mat-card-content>
-
             </mat-card>
         </div>
-
         <div>
-
-
-
-
             <mat-card class='card'>
-
                 <mat-card-content>
-
-
-
                     <p>
-
                         Perdeu a carterinha de vacinação e precisa tomar a vacina da febre amarela? A orientação da Anvisa (Agência Nacional de Vigilância
                         Sanitária) é que a pessoa entre em contato com o local onde foi realizada a vacinação para o resgate
                         da 2ª via. Em caso de dúvida ou impossibilidade de adquirir a carteira de vacinação, vale procurar
@@ -254,11 +238,8 @@
                         segundo a secretaria de saúde. Vale ressaltar que as ações de rotina — vacinação para pessoas que
                         precisam viajar para áreas de risco, seguem nos demais postos da cidade. Veja a lista completa aqui
                     </p>
-
                 </mat-card-content>
-
             </mat-card>
-
             <img src='/imagens/o-medico-de-ontem-de-hoje-e-do-futuro-media.png'>
         </div>
     </div> -->

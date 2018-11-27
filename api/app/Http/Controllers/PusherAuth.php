@@ -16,5 +16,8 @@ class PusherAuth extends Controller
             config('broadcasting.connections.pusher.options')
         );
         return $pusher->socket_auth($request->channel_name, $request->socket_id);
+        // return response()->json(
+        //     $pusher->socket_auth($request->channel_name, $request->socket_id)
+        // );
     }
 }

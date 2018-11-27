@@ -74,6 +74,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "src/styles.css"
+            
             ],
             "scripts": [],
             "assets": [
