@@ -56,10 +56,13 @@ registerLocaleData(localePt);
 
 import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
+import { ViewPostosComponent } from './dashboard/dashboard-admin/view-postos/view-postos.component';
+import { ViewAplicadoresComponent } from './dashboard/dashboard-admin/view-aplicadores/view-aplicadores.component';
+import { ViewVacinasComponent, DialogConfirm } from './dashboard/dashboard-admin/view-vacinas/view-vacinas.component';
 
 
 @NgModule({
-  entryComponents:[ NotificationsComponent ],
+  entryComponents:[ NotificationsComponent ,DialogConfirm],
   declarations: [
     AppComponent,
     LoginComponent,
@@ -90,6 +93,10 @@ import {DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
     MakeCampanhaComponent,
     MakeVacinaComponent,
     NotificationsComponent,
+    ViewPostosComponent,
+    ViewAplicadoresComponent,
+    ViewVacinasComponent,
+    DialogConfirm
 ],
   imports: [
     BrowserModule,

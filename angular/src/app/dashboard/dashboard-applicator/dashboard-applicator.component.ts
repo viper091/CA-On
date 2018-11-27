@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-applicator.component.scss']
 })
 export class DashboardApplicatorComponent implements OnInit {
+  opened: boolean = true;
 
   constructor() { }
 

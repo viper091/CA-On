@@ -127,9 +127,11 @@ export class LoginComponent {
             },
             error => {
                 this.error = error;
+                console.log(this.error);
+                this.formSubmitError = error.error.error;
                 switch (error.status) {
                     case 401:
-                        this.loginUnauthorized();
+                        // this.loginUnauthorized();
                         break;
 
                     default:

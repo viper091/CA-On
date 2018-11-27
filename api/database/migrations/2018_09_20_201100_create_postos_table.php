@@ -19,6 +19,8 @@ class CreatePostosTable extends Migration
             $table->integer('id_cidade');
             $table->integer('id_estado');
             $table->string('endereco');
+            $table->softDeletes();
+
         });
     }
 

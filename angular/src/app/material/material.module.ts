@@ -22,6 +22,7 @@ import {
   MatSnackBarModule,
   MatBadgeModule,
   MatButtonToggleModule,
+  MatDialogModule,
 } from '@angular/material';
 
 @NgModule({
@@ -47,6 +48,7 @@ import {
     MatSnackBarModule,
     MatBadgeModule,
   MatButtonToggleModule,
+  MatDialogModule,
 
 
   ],
@@ -72,6 +74,7 @@ import {
     MatSnackBarModule,
     MatBadgeModule,
     MatButtonToggleModule,
+    MatDialogModule,
 
   ]
 })

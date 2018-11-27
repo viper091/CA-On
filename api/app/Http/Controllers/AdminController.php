@@ -14,6 +14,25 @@ class AdminController extends Controller
 {
     //
 
+    public function postos(){
+        return response()->json(Posto::all());
+    }
+
+    public function aplicadores(){
+        return response()->json(
+            Aplicador::with('registro:id,name','posto:id,endereco')->get()
+
+        );
+    }
+    public function excluir_vacina($id){
+        $vacina = Vacina::find($id);
+        if($vacina){
+        $res = $vacina->delete();
+        return response()->json($res);
+        }
+        return response()->json(0);
+
+    }
     public function criar_posto(Request $request){
         $validator = Validator::make($request->all(), [
             'endereco' => 'required|string|max:255',
@@ -48,8 +67,9 @@ class AdminController extends Controller
        
 
 
-        $aplicador = Aplicador::firstOrCreate(['id_registro' => $input['id_registro']]);
+        $aplicador = Aplicador::firstOrNew(['id_registro' => $input['id_registro']]);
         $aplicador->fill($input);
+        $aplicador->save();
 
         $registro = $aplicador->registro()->first();
         $registro->nivel_acesso = 1;

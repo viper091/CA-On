@@ -1,28 +1,49 @@
 .example-card {
+    /* margin:3px; */
+    /* padding-top: 3px; */
+    /* padding-bottom: 3px; */
     max-width: 300px;
-    margin:3px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
   }
-
+  mat-card img{
+    object-fit: cover; /*this makes de image in src fit to the size of specified below*/
+    height: 80%;
+    /* width: 100%; */
+    max-width: 300px;
+    max-height: 200px;
+    min-height: 200px;
+  }
   .example-header-image {
-    background-image: url('https://scontent.fcpq2-1.fna.fbcdn.net/v/t1.0-9/33783343_1574766679318235_2668800963002761216_n.jpg?_nc_cat=102&_nc_ht=scontent.fcpq2-1.fna&oh=9c45a7de07c47adf5f388ef9c6a609f5&oe=5CABD32A');
+    background-image: url("/imagens/about/vitor_perfil.jpg");
     background-size: cover;
   }
 
   img{
-      width: 337px;
-      height:335px;
+
+       width: 337px; 
+       height:335px; 
   }
 
   .equipe{
       text-align: center;
       margin-bottom:4px;
+      margin: 20px;
   }
 
+  .container{
+    /* display: inline-flex; */
+    display: flex;
+    margin: 3px;
+  }
+  mat-card {
+    align-items: center;
+  }
   .ideia{
     text-align: center;
+    margin: 20px; 
+    
+  }
+  .ideia p {
+     font:400 1em Roboto,"Helvetica Neue",sans-serif;
 
   }
 
