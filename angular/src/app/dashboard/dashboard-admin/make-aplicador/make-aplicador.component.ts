@@ -38,13 +38,13 @@ export class MakeAplicadorComponent implements OnInit {
       id_estado:2
     })
     this.newAppForm = new FormGroup({
-      'app_email': new FormControl('vitor@vitor.com', [
+      'app_email': new FormControl('', [
         Validators.required,
         Validators.email,
       ]),
 
-      'posto_estado': new FormControl('2', [Validators.required]),
-      'posto_cidade': new FormControl('102', [Validators.required]),
+      'posto_estado': new FormControl('', [Validators.required]),
+      'posto_cidade': new FormControl('', [Validators.required]),
       'postos': new FormControl('', [Validators.required]),
 
     });

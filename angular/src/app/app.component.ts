@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs';
 import { UserService } from './api/services/user.service';
 import { ObservableMedia, MediaChange } from '@angular/flex-layout';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

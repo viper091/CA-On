@@ -49,11 +49,11 @@ export class LoginComponent {
         };
         this.loginForm = new FormGroup({
 
-            'email': new FormControl('user@gmail.com', [
+            'email': new FormControl('', [
                 Validators.required,
                 Validators.email,
             ]),
-            'password': new FormControl('user', [
+            'password': new FormControl('', [
                 Validators.required
             ]),
         });
@@ -139,7 +139,6 @@ export class LoginComponent {
                 }
             }
         );
-
         this.ngxService.stop();
 
         // TODO: Use EventEmitter with form value

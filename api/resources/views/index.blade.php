@@ -10,7 +10,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="styles.d143b3c9d925c9d3aafc.css"></head>
+        <link rel="stylesheet" href="angular/styles.css"></head>
 <body>
   <app-root></app-root>
 

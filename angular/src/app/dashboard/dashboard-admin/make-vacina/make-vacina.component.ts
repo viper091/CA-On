@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminCentralService } from '../services/admin-central.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MyErrorStateMatcher } from 'src/app/auth/register/register.component';
 
 @Component({
   selector: 'app-make-vacina',
@@ -12,6 +13,8 @@ export class MakeVacinaComponent implements OnInit {
   minDate = new Date();
   errors:Array<string>;
   done:Array<string>;
+  matcher = new MyErrorStateMatcher();
+
   constructor(private adminS : AdminCentralService) { }
 
   ngOnInit() {

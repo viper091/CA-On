@@ -19,7 +19,7 @@ import { EHeaderComponent } from './design/e-header/e-header.component';
 import { EHeaderTitleComponent } from './design/e-header/e-header-title/e-header-title.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NgxUiLoaderModule } from  'ngx-ui-loader';
+import { NgxUiLoaderModule, NgxUiLoaderHttpModule } from  'ngx-ui-loader';
 import { CityPipe } from './Tools/city.pipe';
 import { InterceptorModule } from './api/interceptor/interceptor.module';
 import { LogoutComponent } from './auth/logout/logout.component';
@@ -59,8 +59,17 @@ import {DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
 import { ViewPostosComponent } from './dashboard/dashboard-admin/view-postos/view-postos.component';
 import { ViewAplicadoresComponent } from './dashboard/dashboard-admin/view-aplicadores/view-aplicadores.component';
 import { ViewVacinasComponent, DialogConfirm } from './dashboard/dashboard-admin/view-vacinas/view-vacinas.component';
+import {  NgxUiLoaderConfig, SPINNER, POSITION, PB_DIRECTION } from 'ngx-ui-loader';
 
-
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  bgsColor: '#00d1b2',
+  bgsPosition: POSITION.centerCenter,
+  bgsSize: 60,
+  bgsOpacity:1,
+  bgsType: SPINNER.circle,
+  pbDirection: PB_DIRECTION.leftToRight, // progress bar direction
+  pbThickness: 55, // progress bar thickness
+};
 @NgModule({
   entryComponents:[ NotificationsComponent ,DialogConfirm],
   declarations: [
@@ -108,10 +117,14 @@ import { ViewVacinasComponent, DialogConfirm } from './dashboard/dashboard-admin
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxUiLoaderModule,
+  
     InterceptorModule,
     NgxHmCarouselModule,
     TruncateModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    NgxUiLoaderHttpModule, // import NgxUiLoaderHttpModule. By default, it will show background loader.
+    // If you need to show foreground spinner, do as follow:
+     NgxUiLoaderHttpModule.forRoot({ showForeground: false })
 
   ],
   providers: [

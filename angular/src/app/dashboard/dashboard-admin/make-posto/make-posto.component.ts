@@ -30,8 +30,8 @@ export class MakePostoComponent implements OnInit {
 
     this.newPostoForm = new FormGroup({
  
-      'posto_estado': new FormControl('2', [Validators.required]),
-      'posto_cidade': new FormControl('102', [Validators.required]),
+      'posto_estado': new FormControl('', [Validators.required]),
+      'posto_cidade': new FormControl('', [Validators.required]),
       'posto_endereco': new FormControl('', [Validators.required]),
 
     });

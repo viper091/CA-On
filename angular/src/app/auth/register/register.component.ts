@@ -39,22 +39,22 @@ export class RegisterComponent implements OnInit {
     this.cidades = this.cityService.getCidades();
 
     this.registerForm = new FormGroup({
-      'name' : new FormControl('vitor', [Validators.required]),
-      'email': new FormControl('vitor@vitor.com', [
+      'name' : new FormControl('', [Validators.required]),
+      'email': new FormControl('', [
         Validators.required,
         Validators.email,
       ]),
       'passGroup': new FormGroup({
-        'password': new FormControl('123456789', [
+        'password': new FormControl('', [
           Validators.required
         ]),
-        'confirmPassword': new FormControl('123456789', [
+        'confirmPassword': new FormControl('', [
           Validators.required,
         ])
       }, [this.MatchPassword]),
-      'estado': new FormControl('2', [Validators.required]),
-      'cidade': new FormControl('102', [Validators.required]),
-      'data': new FormControl(this.maxDate, [
+      'estado': new FormControl('', [Validators.required]),
+      'cidade': new FormControl('', [Validators.required]),
+      'data': new FormControl('', [
         Validators.required
       ]),
     });
